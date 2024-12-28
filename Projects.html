@@ -34,35 +34,35 @@
     }
     nav {
       background-color: #1B4A32;
-      padding: 10px 0;
-      margin-bottom: 20px;
+      padding: 10px;
       text-align: center;
       border-bottom: 2px solid #D4AF37;
     }
     nav a {
       color: #F0EAD6;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
       font-size: 18px;
       font-weight: bold;
-      transition: color 0.3s, transform 0.3s;
+      transition: color 0.3s;
+      display: inline-block;
+      padding: 8px 10px; /* Add padding for better tap targets */
     }
     nav a:hover {
       color: #D4AF37;
-      transform: scale(1.1);
     }
 
-    /* Mobile-specific Navigation Styles */
+    /* Mobile-Specific Navigation */
     @media (max-width: 768px) {
       nav {
         display: flex;
-        flex-direction: column; /* Stack links vertically */
-        align-items: center;
-        padding: 10px;
+        flex-wrap: wrap; /* Allow links to wrap if needed */
+        justify-content: center; /* Center the links */
       }
       nav a {
-        margin: 5px 0; /* Reduce margin for stacked links */
-        font-size: 16px; /* Adjust font size */
+        font-size: 16px; /* Adjust font size for smaller screens */
+        margin: 5px; /* Reduce margin for closer spacing */
+        padding: 5px 8px; /* Adjust padding */
       }
     }
 
@@ -187,5 +187,6 @@
   </div>
 </body>
 </html>
+
 
 
