@@ -5,17 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Megan Campbell - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0-beta3/css/all.min.css">
   <style>
+    /* General Styles */
     body {
       font-family: 'Ysabeau SC', sans-serif;
       margin: 0;
       background: linear-gradient(to bottom, #2C6E4B, #1B4A32, #0D2A1C);
       color: #F0EAD6;
+      scroll-behavior: smooth;
     }
     #content-wrapper {
-      background-color: rgba(44, 110, 75, 0.95); /* Semi-transparent forest green */
-      border: 5px solid #FFFFFF; /* White border */
+      background-color: rgba(44, 110, 75, 0.95);
+      border: 5px solid #FFFFFF;
       max-width: 1200px;
       margin: auto;
       padding: 0;
@@ -40,6 +42,8 @@
       border-radius: 50%;
       box-shadow: 0 0 10px #D4AF37;
     }
+
+    /* Navigation */
     nav {
       background-color: #1B4A32;
       display: flex;
@@ -60,27 +64,27 @@
     nav a:hover {
       color: #D4AF37;
     }
+
+    /* Social Links */
     .social-links {
-  text-align: center;
-  margin: 20px 0;
-}
+      text-align: center;
+      margin: 20px 0;
+    }
+    .social-links a {
+      color: #F0EAD6;
+      margin: 0 10px;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+    .social-links a:hover {
+      color: #D4AF37;
+    }
 
-.social-links a {
-  color: #F0EAD6; /* Ensure the icon color contrasts with the background */
-  margin: 0 10px;
-  font-size: 24px; /* Adjust to make icons visible */
-  transition: color 0.3s;
-  display: inline-block; /* Ensure icons appear inline */
-}
-
-.social-links a:hover {
-  color: #D4AF37; /* Add hover effect for better visibility */
-}
-
+    /* Hero Section */
     .hero {
       text-align: center;
       padding: 50px;
-      background: rgba(0, 0, 0, 0.5); /* Overlay for contrast */
+      background: rgba(0, 0, 0, 0.5);
       color: #F0EAD6;
       border-bottom: 5px solid #D4AF37;
     }
@@ -97,6 +101,8 @@
       width: 150px;
       height: auto;
     }
+
+    /* Slideshow Section */
     .slideshow-container {
       position: relative;
       max-width: 800px;
@@ -137,6 +143,8 @@
     .next {
       right: 10px;
     }
+
+    /* Footer */
     footer {
       background-color: #1B4A32;
       text-align: center;
@@ -145,17 +153,33 @@
       color: #FFFFFF;
       font-size: 14px;
     }
-    .reviews-heading {
-      text-align: center;
-      font-size: 28px;
-      font-family: 'Merriweather', serif;
-      margin-top: 30px;
-      color: #D4AF37;
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .hero h2 {
+        font-size: 24px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .slideshow-container {
+        max-width: 100%;
+      }
+
+      .prev, .next {
+        font-size: 18px;
+        padding: 5px;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Content Wrapper -->
   <div id="content-wrapper">
     <!-- Header Section -->
     <header>
@@ -167,42 +191,23 @@
     <nav>
       <a href="About.html">About</a>
       <a href="Projects.html">Projects</a>
-      <a href="Reviews_page.html">Reviews</a> <!-- Updated link to "reviews_page.html" -->
+      <a href="Reviews_page.html">Reviews</a>
       <a href="Contact.html">Contact</a>
     </nav>
 
- <!-- Social Links -->
-<!-- Social Links -->
-<div class="social-links">
-  <a href="https://megan-campbell.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
-  <a href="https://linktr.ee/Retroconomy" target="_blank"><i class="fas fa-tree"></i></a>
-  <a href="https://github.com/Retroconomy" target="_blank"><i class="fab fa-github"></i></a>
-  <a href="http://www.linkedin.com/in/megan-c-3965bb141" target="_blank"><i class="fab fa-linkedin"></i></a>
-</div>
-
+    <!-- Social Links -->
+    <div class="social-links">
+      <a href="https://megan-campbell.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
+      <a href="https://linktr.ee/Retroconomy" target="_blank"><i class="fas fa-tree"></i></a>
+      <a href="https://github.com/Retroconomy" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="http://www.linkedin.com/in/megan-c-3965bb141" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
       <h2>Welcome to My Portfolio</h2>
       <p>Currently studying Game Design and Production at Abertay University.</p>
       <img src="Images/Abertay_University_Logo.svg.png" alt="Abertay University Logo">
-
-      <!-- About Button -->
-  <div style="margin-top: 20px;">
-    <a href="About.html" style="
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #1B4A32;
-      background-color: #D4AF37;
-      text-decoration: none;
-      border-radius: 5px;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s, box-shadow 0.3s;">
-        About Me
-      </a>
-    </div>
     </section>
 
     <!-- Reviews Heading -->
@@ -247,4 +252,5 @@
   </script>
 </body>
 </html>
+
 
