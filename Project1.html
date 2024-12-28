@@ -14,8 +14,8 @@
       color: #F0EAD6;
     }
     #content-wrapper {
-      background-color: rgba(44, 110, 75, 0.95); /* Semi-transparent forest green */
-      border: 5px solid #FFFFFF; /* White border */
+      background-color: rgba(44, 110, 75, 0.95);
+      border: 5px solid #FFFFFF;
       max-width: 1200px;
       margin: auto;
       padding: 20px;
@@ -36,12 +36,13 @@
       background-color: #1B4A32;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap; /* Allow wrapping for smaller screens */
       padding: 10px 0;
       margin-bottom: 20px;
     }
     nav a {
       color: #F0EAD6;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
       font-size: 18px;
       font-weight: bold;
@@ -84,6 +85,34 @@
       font-size: 14px;
       margin-top: 30px;
     }
+
+    /* Mobile Optimizations */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        margin: 10px 0;
+        font-size: 16px;
+      }
+      .project-content img {
+        width: 100%;
+        max-width: 100%; /* Ensure the image adapts to smaller screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 28px; /* Adjust header text size for small screens */
+      }
+      .project-content img {
+        max-width: 100%; /* Further scale images for smaller devices */
+      }
+      footer {
+        font-size: 12px; /* Adjust footer text size */
+      }
+    }
   </style>
 </head>
 <body>
@@ -106,7 +135,7 @@
     <div class="social-links">
       <a href="https://megan-campbell.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
       <a href="https://linktr.ee/Retroconomy?utm_source=linktree_admin_share" target="_blank">
-        <i class="fas fa-tree"></i> <!-- Linktree icon -->
+        <i class="fas fa-tree"></i>
       </a>
       <a href="https://github.com/Retroconomy" target="_blank"><i class="fab fa-github"></i></a>
       <a href="http://www.linkedin.com/in/megan-c-3965bb141" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -171,3 +200,4 @@
   </div>
 </body>
 </html>
+
