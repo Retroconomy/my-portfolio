@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Megan Campbell</title>
   <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: 'Ysabeau SC', sans-serif;
@@ -13,6 +13,8 @@
       background: linear-gradient(to bottom, #2C6E4B, #1B4A32, #0D2A1C);
       color: #F0EAD6;
     }
+
+    /* Content Wrapper */
     #content-wrapper {
       background-color: rgba(44, 110, 75, 0.95); /* Semi-transparent forest green */
       border: 5px solid #FFFFFF; /* White border */
@@ -20,6 +22,8 @@
       margin: auto;
       padding: 20px;
     }
+
+    /* Header */
     header {
       background-color: #1B4A32;
       padding: 20px;
@@ -32,6 +36,8 @@
       margin: 0;
       color: #D4AF37;
     }
+
+    /* Navigation */
     nav {
       background-color: #1B4A32;
       display: flex;
@@ -50,6 +56,8 @@
     nav a:hover {
       color: #D4AF37;
     }
+
+    /* Social Links */
     .social-links {
       text-align: center;
       margin: 20px 0;
@@ -63,6 +71,8 @@
     .social-links a:hover {
       color: #D4AF37;
     }
+
+    /* Contact Section */
     .contact-section {
       text-align: center;
       padding: 30px;
@@ -77,16 +87,8 @@
       font-size: 18px;
       margin: 10px 0;
     }
-    .contact-section a {
-      font-size: 18px;
-      font-weight: bold;
-      color: #D4AF37;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .contact-section a:hover {
-      color: #F0EAD6;
-    }
+
+    /* Contact Form */
     .contact-form {
       max-width: 600px;
       margin: 20px auto;
@@ -132,6 +134,8 @@
       background: #F0EAD6;
       color: #1B4A32;
     }
+
+    /* Footer */
     footer {
       background-color: #1B4A32;
       text-align: center;
@@ -140,6 +144,25 @@
       color: #FFFFFF;
       font-size: 14px;
       margin-top: 30px;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap; /* Allow links to wrap */
+        justify-content: space-evenly;
+      }
+      .contact-form {
+        padding: 10px; /* Reduce padding */
+        max-width: 100%; /* Full width on smaller devices */
+      }
+      .contact-form input,
+      .contact-form textarea {
+        font-size: 14px; /* Slightly smaller input sizes */
+      }
+      .social-links a {
+        font-size: 20px; /* Slightly smaller icons */
+      }
     }
   </style>
 </head>
@@ -162,14 +185,10 @@
     <!-- Social Links -->
     <div class="social-links">
       <a href="https://megan-campbell.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
-      <a href="https://linktr.ee/Retroconomy?utm_source=linktree_admin_share" target="_blank">
-        <i class="fas fa-tree"></i> <!-- Linktree icon -->
-      </a>
+      <a href="https://linktr.ee/Retroconomy" target="_blank"><i class="fas fa-tree"></i></a>
       <a href="https://github.com/Retroconomy" target="_blank"><i class="fab fa-github"></i></a>
       <a href="http://www.linkedin.com/in/megan-c-3965bb141" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
-
-    
 
     <!-- Contact Form -->
     <div class="contact-form">
@@ -194,5 +213,6 @@
   </div>
 </body>
 </html>
+
 
 
