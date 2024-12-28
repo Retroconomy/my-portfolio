@@ -7,7 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&family=Merriweather:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* General Styles */
     body {
       font-family: 'Ysabeau SC', sans-serif;
       margin: 0;
@@ -37,15 +36,13 @@
       color: #D4AF37;
     }
 
-    /* Navigation */
+    /* Navigation Bar */
     nav {
       background-color: #1B4A32;
-      padding: 10px;
-      text-align: center;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
+      padding: 10px 0;
+      gap: 20px; /* Space between links */
     }
     nav a {
       color: #F0EAD6;
@@ -102,29 +99,37 @@
       margin-top: 30px;
     }
 
-    /* Mobile Adjustments */
+    /* Mobile Navigation */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 28px;
+      nav {
+        justify-content: center;
+        gap: 10px;
       }
       nav a {
         font-size: 16px;
-        padding: 8px 10px;
       }
       .project-content img {
+        width: 100%;
         max-width: 100%;
       }
     }
 
     @media (max-width: 480px) {
+      header h1 {
+        font-size: 28px;
+      }
       nav {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap; /* Allow links to wrap to the next line if needed */
       }
       nav a {
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
+        padding: 8px 10px;
+        font-size: 14px;
+      }
+      .project-content img {
+        max-width: 100%;
+      }
+      footer {
+        font-size: 12px;
       }
     }
   </style>
@@ -197,4 +202,5 @@
   </div>
 </body>
 </html>
+
 
