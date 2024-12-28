@@ -12,15 +12,13 @@
       background: linear-gradient(to bottom, #2C6E4B, #1B4A32, #0D2A1C);
       color: #F0EAD6;
     }
-
     #content-wrapper {
-      background-color: rgba(44, 110, 75, 0.95);
-      border: 5px solid #FFFFFF;
+      background-color: rgba(44, 110, 75, 0.95); /* Semi-transparent forest green */
+      border: 5px solid #FFFFFF; /* White border */
       max-width: 1200px;
       margin: auto;
       padding: 20px;
     }
-
     header {
       background-color: #1B4A32;
       padding: 20px;
@@ -33,27 +31,24 @@
       margin: 0;
       color: #D4AF37;
     }
-
     nav {
       background-color: #1B4A32;
       display: flex;
       justify-content: center;
       padding: 10px 0;
       margin-bottom: 20px;
-      flex-wrap: wrap;
     }
     nav a {
       color: #F0EAD6;
-      margin: 5px 10px;
+      margin: 0 15px;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: bold;
       transition: color 0.3s;
     }
     nav a:hover {
       color: #D4AF37;
     }
-
     .filter-container {
       text-align: center;
       margin-bottom: 20px;
@@ -66,11 +61,10 @@
       background-color: #1B4A32;
       color: #F0EAD6;
     }
-
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+      gap: 20px;
       justify-items: center;
     }
     .gallery .project-tile {
@@ -78,13 +72,13 @@
       border: 3px solid #D4AF37;
       border-radius: 8px;
       text-align: center;
-      width: 100%;
-      max-width: 280px;
+      width: 100%; /* Ensures consistent width */
+      max-width: 280px; /* Caps the width */
       padding: 10px;
       transition: transform 0.3s, box-shadow 0.3s;
     }
     .gallery .project-tile img {
-      width: 100%;
+      width: 100%; /* Fits within the container */
       height: auto;
       border-radius: 5px;
     }
@@ -97,7 +91,6 @@
       transform: scale(1.05);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
-
     footer {
       background-color: #1B4A32;
       text-align: center;
@@ -106,33 +99,6 @@
       color: #FFFFFF;
       font-size: 14px;
       margin-top: 30px;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 28px;
-      }
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav a {
-        font-size: 14px;
-      }
-      .filter-container select {
-        width: 90%;
-      }
-      .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 10px;
-      }
-      .gallery .project-tile {
-        padding: 8px;
-      }
-      .gallery .project-tile h3 {
-        font-size: 16px;
-      }
     }
   </style>
 </head>
@@ -218,8 +184,8 @@
     // Default sorting: Newest to Oldest
     window.onload = function() {
       const filterDropdown = document.getElementById('filter');
-      filterDropdown.value = 'newest';
-      filterProjects();
+      filterDropdown.value = 'newest'; // Set default value
+      filterProjects(); // Sort projects on load
     };
 
     function filterProjects() {
@@ -235,10 +201,10 @@
         projects.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title));
       }
 
+      // Reorder the projects in the DOM
       gallery.innerHTML = '';
       projects.forEach(project => gallery.appendChild(project));
     }
   </script>
 </body>
 </html>
-
