@@ -87,14 +87,14 @@
     }
 
     /* Mobile Optimizations */
+     /* Mobile Navigation */
     @media (max-width: 768px) {
       nav {
-        flex-direction: column;
-        align-items: center;
+        justify-content: center; /* Center links in mobile view */
+        gap: 10px; /* Add spacing between links */
       }
       nav a {
-        margin: 10px 0;
-        font-size: 16px;
+        font-size: 16px; /* Adjust font size for smaller screens */
       }
       .project-content img {
         width: 100%;
