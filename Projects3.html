@@ -36,7 +36,6 @@
       color: #D4AF37;
     }
 
-    
     /* Navigation Bar */
     nav {
       background-color: #1B4A32;
@@ -59,7 +58,6 @@
       border-color: #D4AF37;
       background-color: rgba(255, 255, 255, 0.1);
     }
-
 
     /* Social Links */
     .social-links {
@@ -90,7 +88,6 @@
       border-radius: 10px;
     }
 
-    /* YouTube Video Container */
     .video-container {
       margin: 20px auto;
       text-align: center;
@@ -114,41 +111,37 @@
       margin-top: 30px;
     }
 
-    /* Mobile Optimization */
+    /* Mobile Navigation */
     @media (max-width: 768px) {
       nav {
-        flex-direction: row;
-        flex-wrap: wrap; /* Allow links to wrap */
-        gap: 10px; /* Add spacing between links */
-        justify-content: center; /* Center links in mobile view */
+        justify-content: center;
+        gap: 10px;
       }
       nav a {
         font-size: 16px;
-        padding: 6px 10px;
       }
-      header h1 {
-        font-size: 28px; /* Adjust header size for mobile */
-      }
-      .project-content img,
-      iframe {
-        max-width: 100%; /* Ensure images and videos fit mobile screens */
-      }
-      footer {
-        font-size: 12px; /* Adjust footer text for mobile */
+      .project-content img {
+        width: 100%;
+        max-width: 100%;
       }
     }
 
     @media (max-width: 480px) {
+      header h1 {
+        font-size: 28px;
+      }
       nav {
-        flex-direction: column; /* Stack navigation links vertically */
-        align-items: center;
+        flex-wrap: wrap; /* Allow links to wrap to the next line if needed */
       }
       nav a {
-        font-size: 14px; /* Further reduce link size */
-        padding: 6px 8px;
+        padding: 8px 10px;
+        font-size: 14px;
       }
-      header h1 {
-        font-size: 24px; /* Smaller header size */
+      .project-content img {
+        max-width: 100%;
+      }
+      footer {
+        font-size: 12px;
       }
     }
   </style>
@@ -220,5 +213,6 @@
   </div>
 </body>
 </html>
+
 
 
