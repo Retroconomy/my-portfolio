@@ -13,13 +13,16 @@
       background: linear-gradient(to bottom, #2C6E4B, #1B4A32, #0D2A1C);
       color: #F0EAD6;
     }
+
     #content-wrapper {
-      background-color: rgba(44, 110, 75, 0.95); /* Semi-transparent forest green */
-      border: 5px solid #FFFFFF; /* White border */
+      background-color: rgba(44, 110, 75, 0.95);
+      border: 5px solid #FFFFFF;
       max-width: 1200px;
       margin: auto;
       padding: 20px;
     }
+
+    /* Header */
     header {
       background-color: #1B4A32;
       padding: 20px;
@@ -32,24 +35,31 @@
       margin: 0;
       color: #D4AF37;
     }
+
+    /* Navigation Bar */
     nav {
       background-color: #1B4A32;
       display: flex;
       justify-content: center;
       padding: 10px 0;
-      margin-bottom: 20px;
+      gap: 20px;
     }
     nav a {
       color: #F0EAD6;
-      margin: 0 15px;
       text-decoration: none;
       font-size: 18px;
       font-weight: bold;
-      transition: color 0.3s;
+      padding: 10px 15px;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
     }
     nav a:hover {
       color: #D4AF37;
+      border-color: #D4AF37;
+      background-color: rgba(255, 255, 255, 0.1);
     }
+
+    /* Social Links */
     .social-links {
       text-align: center;
       margin: 20px 0;
@@ -63,6 +73,8 @@
     .social-links a:hover {
       color: #D4AF37;
     }
+
+    /* Project Content */
     .project-content {
       margin-top: 20px;
       line-height: 1.6;
@@ -75,6 +87,8 @@
       border: 3px solid #D4AF37;
       border-radius: 10px;
     }
+
+    /* YouTube Video Container */
     .video-container {
       margin: 20px auto;
       text-align: center;
@@ -86,6 +100,8 @@
       border: 3px solid #D4AF37;
       border-radius: 10px;
     }
+
+    /* Footer */
     footer {
       background-color: #1B4A32;
       text-align: center;
@@ -94,6 +110,43 @@
       color: #FFFFFF;
       font-size: 14px;
       margin-top: 30px;
+    }
+
+    /* Mobile Optimization */
+    @media (max-width: 768px) {
+      nav {
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+      }
+      nav a {
+        font-size: 16px;
+        padding: 8px 10px;
+      }
+      header h1 {
+        font-size: 28px; /* Adjust header size for mobile */
+      }
+      .project-content img,
+      iframe {
+        max-width: 100%; /* Ensure images and videos fit mobile screens */
+      }
+      footer {
+        font-size: 12px; /* Adjust footer text for mobile */
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+      }
+      nav a {
+        font-size: 14px; /* Further reduce link size */
+        padding: 6px 8px;
+      }
+      header h1 {
+        font-size: 24px; /* Smaller header size */
+      }
     }
   </style>
 </head>
@@ -117,7 +170,7 @@
     <div class="social-links">
       <a href="https://megan-campbell.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
       <a href="https://linktr.ee/Retroconomy?utm_source=linktree_admin_share" target="_blank">
-        <i class="fas fa-tree"></i> <!-- Linktree icon -->
+        <i class="fas fa-tree"></i>
       </a>
       <a href="https://github.com/Retroconomy" target="_blank"><i class="fab fa-github"></i></a>
       <a href="http://www.linkedin.com/in/megan-c-3965bb141" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -151,13 +204,10 @@
       </p>
 
       <h2>YouTube Video</h2>
-      <p>
-        Watch a gameplay video for <strong>Biomes and Beyond</strong> below:
-      </p>
+      <p>Watch a gameplay video for <strong>Biomes and Beyond</strong> below:</p>
       <div class="video-container">
         <iframe src="https://www.youtube.com/embed/RVJO1prtHEU" frameborder="0" allowfullscreen></iframe>
       </div>
-
     </section>
 
     <!-- Footer Section -->
@@ -167,3 +217,4 @@
   </div>
 </body>
 </html>
+
