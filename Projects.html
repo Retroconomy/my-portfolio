@@ -12,6 +12,7 @@
       background: linear-gradient(to bottom, #2C6E4B, #1B4A32, #0D2A1C);
       color: #F0EAD6;
     }
+
     #content-wrapper {
       background-color: rgba(44, 110, 75, 0.95); /* Semi-transparent forest green */
       border: 5px solid #FFFFFF; /* White border */
@@ -19,18 +20,21 @@
       margin: auto;
       padding: 20px;
     }
+
     header {
       background-color: #1B4A32;
       padding: 20px;
       text-align: center;
       border-bottom: 5px solid #D4AF37;
     }
+
     header h1 {
       font-family: 'Merriweather', serif;
       font-size: 36px;
       margin: 0;
       color: #D4AF37;
     }
+
     nav {
       background-color: #1B4A32;
       display: flex;
@@ -38,6 +42,7 @@
       padding: 10px 0;
       margin-bottom: 20px;
     }
+
     nav a {
       color: #F0EAD6;
       margin: 0 15px;
@@ -46,13 +51,16 @@
       font-weight: bold;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #D4AF37;
     }
+
     .filter-container {
       text-align: center;
       margin-bottom: 20px;
     }
+
     .filter-container select {
       padding: 10px;
       font-size: 16px;
@@ -61,36 +69,42 @@
       background-color: #1B4A32;
       color: #F0EAD6;
     }
+
     .gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+      grid-template-columns: repeat(3, 1fr); /* Desktop: 3 columns per row */
       gap: 20px;
       justify-items: center;
     }
+
     .gallery .project-tile {
       background: #1B4A32;
       border: 3px solid #D4AF37;
       border-radius: 8px;
       text-align: center;
-      width: 100%; /* Ensures consistent width */
-      max-width: 280px; /* Caps the width */
+      width: 100%;
+      max-width: 280px;
       padding: 10px;
       transition: transform 0.3s, box-shadow 0.3s;
     }
+
     .gallery .project-tile img {
-      width: 100%; /* Fits within the container */
+      width: 100%;
       height: auto;
       border-radius: 5px;
     }
+
     .gallery .project-tile h3 {
       color: #FFFFFF;
       font-size: 18px;
       margin: 10px 0;
     }
+
     .gallery .project-tile:hover {
       transform: scale(1.05);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
+
     footer {
       background-color: #1B4A32;
       text-align: center;
@@ -99,6 +113,40 @@
       color: #FFFFFF;
       font-size: 14px;
       margin-top: 30px;
+    }
+
+    /* Mobile Optimization */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 28px; /* Smaller header for mobile */
+      }
+
+      nav {
+        flex-wrap: wrap; /* Wrap navigation links */
+      }
+
+      nav a {
+        margin: 5px 10px; /* Adjust spacing for smaller screens */
+        font-size: 14px; /* Smaller font size */
+      }
+
+      .filter-container select {
+        width: 90%; /* Fit filter dropdown to smaller screens */
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible layout */
+        gap: 15px; /* Reduce gaps */
+      }
+
+      .gallery .project-tile {
+        max-width: none; /* Allow tiles to resize naturally */
+        padding: 8px; /* Adjust padding for smaller screens */
+      }
+
+      .gallery .project-tile h3 {
+        font-size: 16px; /* Smaller titles */
+      }
     }
   </style>
 </head>
@@ -184,8 +232,8 @@
     // Default sorting: Newest to Oldest
     window.onload = function() {
       const filterDropdown = document.getElementById('filter');
-      filterDropdown.value = 'newest'; // Set default value
-      filterProjects(); // Sort projects on load
+      filterDropdown.value = 'newest';
+      filterProjects();
     };
 
     function filterProjects() {
@@ -201,10 +249,10 @@
         projects.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title));
       }
 
-      // Reorder the projects in the DOM
       gallery.innerHTML = '';
       projects.forEach(project => gallery.appendChild(project));
     }
   </script>
 </body>
 </html>
+
