@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Megan Campbell</title>
+  <title>Pokedex Project - Megan Campbell</title>
   <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: 'Ysabeau SC', sans-serif;
@@ -12,99 +13,84 @@
       background: linear-gradient(to bottom, #2C6E4B, #1B4A32, #0D2A1C);
       color: #F0EAD6;
     }
-
     #content-wrapper {
-      background-color: rgba(44, 110, 75, 0.95); /* Semi-transparent forest green */
-      border: 5px solid #FFFFFF; /* White border */
+      background-color: rgba(44, 110, 75, 0.95);
+      border: 5px solid #FFFFFF;
       max-width: 1200px;
       margin: auto;
       padding: 20px;
     }
-
     header {
       background-color: #1B4A32;
       padding: 20px;
       text-align: center;
       border-bottom: 5px solid #D4AF37;
     }
-
     header h1 {
       font-family: 'Merriweather', serif;
       font-size: 36px;
       margin: 0;
       color: #D4AF37;
     }
-
     nav {
       background-color: #1B4A32;
-      display: flex;
-      justify-content: center;
       padding: 10px 0;
       margin-bottom: 20px;
+      text-align: center;
+      border-bottom: 2px solid #D4AF37;
     }
-
     nav a {
       color: #F0EAD6;
       margin: 0 15px;
       text-decoration: none;
       font-size: 18px;
       font-weight: bold;
-      transition: color 0.3s;
+      transition: color 0.3s, transform 0.3s;
     }
-
     nav a:hover {
       color: #D4AF37;
+      transform: scale(1.1);
     }
 
-    .filter-container {
+    /* Mobile-specific Navigation Styles */
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+        padding: 10px;
+      }
+      nav a {
+        margin: 5px 0; /* Reduce margin for stacked links */
+        font-size: 16px; /* Adjust font size */
+      }
+    }
+
+    .social-links {
       text-align: center;
-      margin-bottom: 20px;
+      margin: 20px 0;
     }
-
-    .filter-container select {
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #D4AF37;
-      background-color: #1B4A32;
+    .social-links a {
       color: #F0EAD6;
+      margin: 0 10px;
+      font-size: 24px;
+      transition: color 0.3s;
     }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Desktop: 3 columns per row */
-      gap: 20px;
-      justify-items: center;
+    .social-links a:hover {
+      color: #D4AF37;
     }
-
-    .gallery .project-tile {
-      background: #1B4A32;
+    .project-content {
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+    .project-content img {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      display: block;
       border: 3px solid #D4AF37;
-      border-radius: 8px;
-      text-align: center;
-      width: 100%;
-      max-width: 280px;
-      padding: 10px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 10px;
     }
-
-    .gallery .project-tile img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-    }
-
-    .gallery .project-tile h3 {
-      color: #FFFFFF;
-      font-size: 18px;
-      margin: 10px 0;
-    }
-
-    .gallery .project-tile:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-
     footer {
       background-color: #1B4A32;
       text-align: center;
@@ -114,47 +100,13 @@
       font-size: 14px;
       margin-top: 30px;
     }
-
-    /* Mobile Optimization */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 28px; /* Smaller header for mobile */
-      }
-
-      nav {
-        flex-wrap: wrap; /* Wrap navigation links */
-      }
-
-      nav a {
-        margin: 5px 10px; /* Adjust spacing for smaller screens */
-        font-size: 14px; /* Smaller font size */
-      }
-
-      .filter-container select {
-        width: 90%; /* Fit filter dropdown to smaller screens */
-      }
-
-      .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible layout */
-        gap: 15px; /* Reduce gaps */
-      }
-
-      .gallery .project-tile {
-        max-width: none; /* Allow tiles to resize naturally */
-        padding: 8px; /* Adjust padding for smaller screens */
-      }
-
-      .gallery .project-tile h3 {
-        font-size: 16px; /* Smaller titles */
-      }
-    }
   </style>
 </head>
 <body>
   <div id="content-wrapper">
     <!-- Header Section -->
     <header>
-      <h1>Projects</h1>
+      <h1>Pokedex Project</h1>
     </header>
 
     <!-- Navigation Bar -->
@@ -166,60 +118,66 @@
       <a href="Contact.html">Contact</a>
     </nav>
 
-    <!-- Filter Option -->
-    <div class="filter-container">
-      <label for="filter">Sort By: </label>
-      <select id="filter" onchange="filterProjects()">
-        <option value="newest">Newest to Oldest</option>
-        <option value="oldest">Oldest to Newest</option>
-        <option value="alphabetical">Alphabetical</option>
-      </select>
+    <!-- Social Links -->
+    <div class="social-links">
+      <a href="https://megan-campbell.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
+      <a href="https://linktr.ee/Retroconomy?utm_source=linktree_admin_share" target="_blank">
+        <i class="fas fa-tree"></i> <!-- Linktree icon -->
+      </a>
+      <a href="https://github.com/Retroconomy" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="http://www.linkedin.com/in/megan-c-3965bb141" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
 
-    <!-- Projects Gallery -->
-    <section class="gallery" id="projects-gallery">
-      <div class="project-tile" data-date="2024-12-18" data-title="Visual Art and Design Module - Game Concept Portfolio">
-        <a href="Project7.html">
-          <img src="Images/gameconcept_project7.png" alt="Game Concept Portfolio">
-          <h3>Visual Art and Design Module - Game Concept Portfolio</h3>
-        </a>
-      </div>
-      <div class="project-tile" data-date="2024-12-06" data-title="Rooted Realms">
-        <a href="Project5.html">
-          <img src="Images/rootedrealms_project5.png" alt="Rooted Realms">
-          <h3>Rooted Realms</h3>
-        </a>
-      </div>
-      <div class="project-tile" data-date="2024-11-15" data-title="The Curse of the Magic Mop">
-        <a href="Project4.html">
-          <img src="Images/curseofthemagicmop_project4.png" alt="The Curse of the Magic Mop">
-          <h3>The Curse of the Magic Mop</h3>
-        </a>
-      </div>
-      <div class="project-tile" data-date="2024-10-25" data-title="Biomes and Beyond">
-        <a href="Projects3.html">
-          <img src="Images/biomesandbeyond_project3.png" alt="Biomes and Beyond">
-          <h3>Biomes and Beyond</h3>
-        </a>
-      </div>
-      <div class="project-tile" data-date="2024-10-04" data-title="Voyagers of the Void">
-        <a href="Projects2.html">
-          <img src="Images/voyagersofthevoid_project2.png" alt="Voyagers of the Void">
-          <h3>Voyagers of the Void</h3>
-        </a>
-      </div>
-      <div class="project-tile" data-date="2024-09-30" data-title="WildBound">
-        <a href="Project6.html">
-          <img src="Images/wildbound_project6.png" alt="WildBound">
-          <h3>WildBound</h3>
-        </a>
-      </div>
-      <div class="project-tile" data-date="2024-09-20" data-title="Retro's Pokedex">
-        <a href="Project1.html">
-          <img src="Images/pokedex_project1.png" alt="Retro's Pokedex">
-          <h3>Retro's Pokedex</h3>
-        </a>
-      </div>
+    <!-- Project Content -->
+    <section class="project-content">
+      <h2>About This Project</h2>
+      <p>
+        This is my Pokémon Information System, also known as the <strong>Pokedex</strong>. 
+        It is a tool designed to showcase the information of all Pokémon from the very first generation.
+        By leveraging a custom API, I connected a database that retrieves and displays Pokémon information,
+        including their names, types, and other essential details.
+      </p>
+
+      <img src="Images/pokedex_project1.png" alt="Pokedex Project Screenshot">
+
+      <h2>How I Built It</h2>
+      <p>
+        The creation of this Pokedex required multiple steps:
+      </p>
+      <ul>
+        <li><strong>Custom API Development:</strong> I designed a custom API that interacts with a Pokémon database, 
+          fetching data about each Pokémon from Generation 1.</li>
+        <li><strong>Database Integration:</strong> The database stores critical information about each Pokémon, such as
+          their types, evolutions, abilities, and base stats. The API queries this data based on the user’s input.</li>
+        <li><strong>Frontend Design:</strong> Using HTML, CSS, and JavaScript, I created a user-friendly interface that
+          displays Pokémon information in a clear and appealing way. Each Pokémon is represented with a sprite, its name,
+          and its types.</li>
+      </ul>
+
+      <h2>How to Make Your Own Pokedex</h2>
+      <p>
+        If you'd like to create a similar Pokedex, here are the basic steps:
+      </p>
+      <ol>
+        <li><strong>Gather Pokémon Data:</strong> Use a Pokémon API like <a href="https://pokeapi.co/" target="_blank">PokeAPI</a>
+          or create your own database of Pokémon information.</li>
+        <li><strong>Set Up a Backend:</strong> Build a server-side application (e.g., Node.js) that fetches and serves Pokémon data.</li>
+        <li><strong>Design the Interface:</strong> Use HTML and CSS to design a simple, intuitive interface for the user.</li>
+        <li><strong>Add Search/Filter Features:</strong> Implement JavaScript to allow users to search for specific Pokémon or filter
+          them by type or generation.</li>
+        <li><strong>Host Your Application:</strong> Deploy your project using services like GitHub Pages, Netlify, or Heroku to make
+          it accessible online.</li>
+      </ol>
+
+      <h2>Technologies Used</h2>
+      <p>
+        For this project, I used the following technologies:
+      </p>
+      <ul>
+        <li><strong>HTML, CSS, JavaScript:</strong> For the user interface and interactivity.</li>
+        <li><strong>Custom API:</strong> Built using Node.js and Express to fetch data dynamically.</li>
+        <li><strong>Database:</strong> MySQL for storing detailed Pokémon information.</li>
+      </ul>
     </section>
 
     <!-- Footer Section -->
@@ -227,32 +185,7 @@
       &copy; 2024 Megan Campbell. All rights reserved.
     </footer>
   </div>
-
-  <script>
-    // Default sorting: Newest to Oldest
-    window.onload = function() {
-      const filterDropdown = document.getElementById('filter');
-      filterDropdown.value = 'newest';
-      filterProjects();
-    };
-
-    function filterProjects() {
-      const gallery = document.getElementById('projects-gallery');
-      const projects = Array.from(gallery.children);
-      const filterValue = document.getElementById('filter').value;
-
-      if (filterValue === 'newest') {
-        projects.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
-      } else if (filterValue === 'oldest') {
-        projects.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
-      } else if (filterValue === 'alphabetical') {
-        projects.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title));
-      }
-
-      gallery.innerHTML = '';
-      projects.forEach(project => gallery.appendChild(project));
-    }
-  </script>
 </body>
 </html>
+
 
