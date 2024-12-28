@@ -12,6 +12,7 @@
       background: linear-gradient(to bottom, #2C6E4B, #1B4A32, #0D2A1C); /* Green gradient */
       color: #F0EAD6;
     }
+
     #content-wrapper {
       background-color: rgba(44, 110, 75, 0.95); /* Semi-transparent forest green */
       border: 5px solid #FFFFFF; /* White border */
@@ -19,18 +20,21 @@
       margin: auto;
       padding: 20px;
     }
+
     header {
       background-color: #1B4A32;
       padding: 20px;
       text-align: center;
       border-bottom: 5px solid #D4AF37;
     }
+
     header h1 {
       font-family: 'Merriweather', serif;
       font-size: 36px;
       margin: 0;
       color: #D4AF37;
     }
+
     nav {
       background-color: #1B4A32;
       display: flex;
@@ -38,6 +42,7 @@
       padding: 10px 0;
       margin-bottom: 20px;
     }
+
     nav a {
       color: #F0EAD6;
       margin: 0 15px;
@@ -46,13 +51,26 @@
       font-weight: bold;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #D4AF37;
     }
+
     .social-links {
-  text-align: center;
-  margin: 20px 0;
-}
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .social-links a {
+      color: #F0EAD6;
+      margin: 0 10px;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #D4AF37;
+    }
 
     .reviews-gallery {
       display: flex;
@@ -61,16 +79,20 @@
       padding: 20px 0;
       scroll-behavior: smooth;
     }
+
     .reviews-gallery::-webkit-scrollbar {
       height: 8px;
     }
+
     .reviews-gallery::-webkit-scrollbar-thumb {
       background: #D4AF37;
       border-radius: 10px;
     }
+
     .reviews-gallery::-webkit-scrollbar-track {
       background: #1B4A32;
     }
+
     .review-item {
       flex: 0 0 auto;
       width: 300px;
@@ -81,20 +103,24 @@
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
     }
+
     .review-item:hover {
       transform: scale(1.05);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
+
     .review-item img {
       width: 100%;
       height: auto;
       display: block;
     }
+
     .review-item h3 {
       color: #FFFFFF;
       margin: 10px 0;
       font-size: 20px;
     }
+
     footer {
       background-color: #1B4A32;
       text-align: center;
@@ -102,6 +128,42 @@
       border-top: 5px solid #D4AF37;
       color: #FFFFFF;
       font-size: 14px;
+    }
+
+    /* Mobile Optimization */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 28px; /* Smaller header font size for mobile */
+      }
+
+      nav {
+        flex-wrap: wrap; /* Wrap navigation links on smaller screens */
+      }
+
+      nav a {
+        font-size: 16px; /* Adjust font size for smaller devices */
+        margin: 5px;
+      }
+
+      .reviews-gallery {
+        flex-wrap: wrap; /* Wrap reviews to fit smaller screens */
+        justify-content: center; /* Center reviews on mobile */
+        gap: 15px; /* Adjust spacing */
+        padding: 10px; /* Reduce padding */
+      }
+
+      .review-item {
+        width: 80%; /* Reduce review item size for smaller screens */
+        max-width: 250px;
+      }
+
+      .review-item h3 {
+        font-size: 18px; /* Smaller title font size */
+      }
+
+      footer {
+        font-size: 12px; /* Adjust footer font size for mobile */
+      }
     }
   </style>
 </head>
@@ -114,21 +176,20 @@
 
     <!-- Navigation Bar -->
     <nav>
-      <a href="index.html">Home</a> <!-- Updated Home link -->
+      <a href="index.html">Home</a>
       <a href="About.html">About</a>
       <a href="Projects.html">Projects</a>
       <a href="Contact.html">Contact</a>
       <a href="Reviews_page.html">Reviews</a>
-
     </nav>
 
     <!-- Social Links -->
-<div class="social-links">
-    <a href="https://megan-campbell.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
-    <a href="https://linktr.ee/Retroconomy" target="_blank"><i class="fas fa-tree"></i></a>
-    <a href="https://github.com/Retroconomy" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="http://www.linkedin.com/in/megan-c-3965bb141" target="_blank"><i class="fab fa-linkedin"></i></a>
-  </div>
+    <div class="social-links">
+      <a href="https://megan-campbell.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
+      <a href="https://linktr.ee/Retroconomy" target="_blank"><i class="fas fa-tree"></i></a>
+      <a href="https://github.com/Retroconomy" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="http://www.linkedin.com/in/megan-c-3965bb141" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
 
     <!-- Reviews Gallery Section -->
     <section class="reviews-gallery">
@@ -159,5 +220,6 @@
   </div>
 </body>
 </html>
+
 
 
