@@ -20,21 +20,6 @@
       scroll-behavior: smooth;
     }
 
-    /* Full-Width Header */
-    header {
-      background-color: #1B4A32;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 5px solid #D4AF37;
-      width: 100%; /* Ensures full width */
-    }
-    header h1 {
-      font-family: 'Merriweather', serif;
-      font-size: 36px;
-      margin: 0;
-      color: #D4AF37;
-    }
-
     /* Content Wrapper */
     #content-wrapper {
       background-color: rgba(44, 110, 75, 0.95);
@@ -42,6 +27,20 @@
       max-width: 1200px;
       margin: auto;
       padding: 20px;
+    }
+
+    /* Header */
+    header {
+      background-color: #1B4A32;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 5px solid #D4AF37;
+    }
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 36px;
+      margin: 0;
+      color: #D4AF37;
     }
 
     /* Navigation */
@@ -82,7 +81,7 @@
       color: #D4AF37;
     }
 
-    /* Flexbox for Abertay Logo and Main Photo */
+    /* Abertay Logo and Main Photo */
     .image-container {
       display: flex;
       justify-content: center;
@@ -91,11 +90,10 @@
       margin: 20px 0;
     }
     .image-container img {
-      width: auto;
-      max-width: 100%;
+      width: 150px;
       height: auto;
     }
-    .main-photo {
+    .image-container .main-photo {
       border-radius: 50%;
       box-shadow: 0 0 10px #D4AF37;
     }
@@ -131,7 +129,7 @@
       height: 450px;
     }
 
-    /* Full-Width Footer */
+    /* Footer */
     footer {
       background-color: #1B4A32;
       text-align: center;
@@ -139,63 +137,54 @@
       border-top: 5px solid #D4AF37;
       color: #FFFFFF;
       font-size: 14px;
-      width: 100%; /* Ensures full width */
-      position: relative; /* Ensures it adapts to content */
     }
 
-    /* Responsive Design */
+    /* Mobile Styles */
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        text-align: center;
-      }
-
       .image-container {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: column; /* Stack images vertically */
       }
-
-      .about-section p {
-        font-size: 16px;
+      .image-container img {
+        width: 100px; /* Smaller images on mobile */
       }
-
-      .map-section iframe {
-        height: 300px;
+      nav {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <h1>About Me</h1>
-  </header>
+  <div id="content-wrapper">
+    <!-- Header Section -->
+    <header>
+      <h1>About Me</h1>
+    </header>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="Projects.html">Projects</a>
-    <a href="Reviews_page.html">Reviews</a>
-    <a href="Contact.html">Contact</a>
-  </nav>
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Projects.html">Projects</a>
+      <a href="Reviews_page.html">Reviews</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
 
-  <!-- Social Links -->
-  <div class="social-links">
-    <a href="https://megan-campbell.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
-    <a href="https://linktr.ee/Retroconomy" target="_blank"><i class="fas fa-tree"></i></a>
-    <a href="https://github.com/Retroconomy" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="http://www.linkedin.com/in/megan-c-3965bb141" target="_blank"><i class="fab fa-linkedin"></i></a>
-  </div>
+    <!-- Social Links -->
+    <div class="social-links">
+      <a href="https://megan-campbell.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
+      <a href="https://linktr.ee/Retroconomy" target="_blank"><i class="fas fa-tree"></i></a>
+      <a href="https://github.com/Retroconomy" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="http://www.linkedin.com/in/megan-c-3965bb141" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
 
-  <!-- Flexbox for Abertay Logo and Main Photo -->
-  <div class="image-container">
-    <img src="Images/Abertay_University_Logo.svg.png" alt="Abertay University Logo">
-    <img src="Images/main photo for website.png" alt="Megan Campbell" class="main-photo">
-  </div>
+    <!-- Abertay Logo and Main Photo -->
+    <div class="image-container">
+      <img src="Images/Abertay_University_Logo.svg.png" alt="Abertay University Logo">
+      <img src="Images/main photo for website.png" alt="Megan Campbell" class="main-photo">
+    </div>
 
-<!-- About Section -->
+   <!-- About Section -->
       <section class="about-section">
-   
       <p>Hi there!</p>
       <p>I’m Megan Campbell, a game design student living in the heart of Dundee—Scotland’s vibrant gaming hub. My journey into game development might be a little unconventional, but that’s what makes it so exciting! I transitioned from managing a bar to diving headfirst into the world of game design, fueled by a passion I discovered during the lockdown. What started as casual curiosity about programming and QA testing quickly became an obsession with understanding how games work, why they captivate us, and yes—how to fix those pesky bugs.</p>
       <p>One of my favorite games of all time is <strong>Fable 3</strong>. Sure, it’s not perfect, but there’s something magical about its world, its quirky characters, and the choices it lets you make. It’s a game that taught me that even flaws can be part of what makes something memorable—a lesson I carry with me in my own projects.</p>
@@ -205,16 +194,21 @@
       <p>Thanks for stopping by!</p>
     </section>
 
-  <!-- Map Section -->
-  <section class="map-section">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2241.887667727903!2d-2.9707211847659627!3d56.4625069807646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48865d2195fa9cb5%3A0xbbe14cd8ee1188ed!2sAbertay%20University!5e0!3m2!1sen!2suk!4v1697981681406!5m2!1sen!2suk" 
-      allowfullscreen="" loading="lazy"></iframe>
-  </section>
+    <!-- Map Section -->
+    <section class="map-section">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2241.887667727903!2d-2.9707211847659627!3d56.4625069807646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48865d2195fa9cb5%3A0xbbe14cd8ee1188ed!2sAbertay%20University!5e0!3m2!1sen!2suk!4v1697981681406!5m2!1sen!2suk" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
 
-  <!-- Footer Section -->
-  <footer>
-    &copy; 2024 Megan Campbell. All rights reserved.
-  </footer>
+    <!-- Footer -->
+    <footer>
+      &copy; 2024 Megan Campbell. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
 
