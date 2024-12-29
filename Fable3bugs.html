@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fable 3 Bug Reports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Ysabeau SC', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #2C6E4B, #1B4A32, #0D2A1C);
+      color: #F0EAD6;
+      scroll-behavior: smooth;
+    }
+    #content-wrapper {
+      background-color: rgba(44, 110, 75, 0.95);
+      border: 5px solid #FFFFFF;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    header {
+      background-color: #1B4A32;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 5px solid #D4AF37;
+    }
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 36px;
+      margin: 0;
+      color: #D4AF37;
+    }
+    nav {
+      background-color: #1B4A32;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      margin-bottom: 20px;
+    }
+    nav a {
+      color: #F0EAD6;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #D4AF37;
+    }
+    .video-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border: 3px solid #D4AF37;
+      border-radius: 10px;
+    }
+    .bug-report {
+      margin: 30px 0;
+    }
+    .bug-report h2 {
+      font-size: 28px;
+      color: #D4AF37;
+    }
+    .bug-report p, .bug-report ul, .bug-report ol {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border: 3px solid #D4AF37;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #1B4A32;
+      text-align: center;
+      padding: 10px;
+      border-top: 5px solid #D4AF37;
+      color: #FFFFFF;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div id="content-wrapper">
+    <!-- Header Section -->
+    <header>
+      <h1>Fable 3 Bug Reports</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Projects.html">Projects</a>
+      <a href="Reviews_page.html">Reviews</a>
+      <a href="QApage.html">QA Testing</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+
+    <!-- Video Viewer -->
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/lpR2Uy2VLMc" 
+        frameborder="0" 
+        allowfullscreen 
+        title="Fable 3 Bug Report Video">
+      </iframe>
+    </div>
+
+    <!-- Bug Report -->
+    <section class="bug-report">
+      <h2>Bug Report: Fable 3 - Traitor's Keep DLC Glitches</h2>
+      <h3>Details:</h3>
+      <p><strong>Title:</strong> Multiple Gameplay Issues Post-Traitor's Keep DLC</p>
+      <p><strong>Priority:</strong> High</p>
+      <p><strong>Severity:</strong> Major</p>
+
+      <h3>Description:</h3>
+      <p>
+        Players encounter numerous gameplay glitches after installing the Traitor's Keep DLC, including inability to:
+        <ul>
+          <li>Play Reaver's Wheel game</li>
+          <li>Start and complete the Shooting Range activity</li>
+          <li>Engage with the Hobbe Killing Contest at Godwin Estate</li>
+        </ul>
+        Additionally, legacy saves appear to be more affected than new ones started post-DLC installation.
+      </p>
+
+      <h3>Steps to Reproduce:</h3>
+      <ol>
+        <li>Install Traitor's Keep DLC on Fable 3.</li>
+        <li>Load an existing save file created before DLC installation.</li>
+        <li>Attempt to start Reaver’s Wheel or the Shooting Range.</li>
+        <li>Observe activities failing to trigger properly.</li>
+      </ol>
+
+      <h3>Expected Behavior:</h3>
+      <p>
+        Players should be able to engage with all activities, including Reaver's Wheel, Shooting Range, and Hobbe Killing Contest, without interruptions.
+      </p>
+
+      <h3>Observed Behavior:</h3>
+      <p>
+        Activities fail to load correctly. For example, Reaver's Wheel does not start, the Shooting Range timer and targets fail to appear, and Hobbe Killing Contest cannot be initiated.
+      </p>
+
+      <h3>Resolution:</h3>
+      <p>
+        Developers addressed these issues in subsequent updates by ensuring compatibility between older save files and the new DLC. New save files created post-DLC installation do not experience these glitches.
+      </p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+      <img src="Images/hobbekillingcontest.jpg" alt="Hobbe Killing Contest">
+      <img src="Images/reaverswheel.jpg" alt="Reaver's Wheel">
+      <img src="Images/shootingrange.jpg" alt="Shooting Range">
+    </section>
+
+    <section class="bug-report">
+        <h2>Bug Report: Fable 3 - Quest "The Game" Completion Bug</h2>
+      
+        <h3>Details:</h3>
+        <p><strong>Title:</strong> Quest "The Game" Cannot Be Completed</p>
+        <p><strong>Priority:</strong> High</p>
+        <p><strong>Severity:</strong> Major</p>
+      
+        <h3>Description:</h3>
+        <p>
+          Players are unable to complete the quest "The Game" after defeating the Baron. Upon reaching the final stage of the quest, the green circle prompt ("A" to kiss the princess) does not appear, preventing progression. 
+          This appears to occur after interactions with a henchman, such as giving or receiving gifts, during the quest.
+        </p>
+      
+        <h3>Steps to Reproduce:</h3>
+        <ol>
+          <li>Start the quest "The Game" and progress to the final stage.</li>
+          <li>Kill the Baron to reach the concluding part of the quest.</li>
+          <li>Invite a henchman to the game and perform a gift interaction (e.g., giving or receiving items).</li>
+          <li>Attempt to complete the quest by interacting with the princess (kiss prompt).</li>
+          <li>Observe the absence of the green circle prompt to proceed.</li>
+        </ol>
+      
+        <h3>Expected Behavior:</h3>
+        <p>
+          After defeating the Baron, the player should receive the green circle prompt ("A" to kiss the princess), allowing the quest to be completed.
+        </p>
+      
+        <h3>Observed Behavior:</h3>
+        <p>
+          The green circle prompt does not appear, leaving the player unable to complete the quest. Saving the game at this stage locks the quest in an incomplete state, as the autosave feature prevents restarting the quest.
+        </p>
+      
+        <h3>Root Cause:</h3>
+        <p>
+          The interaction with the henchman (e.g., gift exchange) seems to interfere with the quest script, preventing the final event trigger from initializing. This issue may also be tied to the lack of an internet connection or an unpatched version of the game.
+        </p>
+      
+        <h3>Solution:</h3>
+        <ul>
+          <li><strong>Investigation:</strong>
+            <ul>
+              <li>Tested with and without henchmen interactions during the quest.</li>
+              <li>Confirmed that the issue occurs more frequently in offline or unpatched versions of the game.</li>
+            </ul>
+          </li>
+          <li><strong>Fix Implementation:</strong>
+            <ul>
+              <li>Applied a patch (possibly tied to the free Yule Hat update) that resolved the issue.</li>
+              <li>Modified quest scripts to ensure henchman interactions do not block the final event trigger.</li>
+            </ul>
+          </li>
+          <li><strong>Testing:</strong>
+            <ul>
+              <li>Replayed the quest with and without henchman interactions to verify the fix.</li>
+              <li>Ensured the green circle prompt appeared in both patched and unpatched versions when online.</li>
+            </ul>
+          </li>
+        </ul>
+      
+        <h3>Resolution:</h3>
+        <p>
+          The bug appears to have been resolved with a patch introduced alongside the free Yule Hat DLC. Players are advised to connect to the internet and download the patch to ensure they can complete the quest.
+        </p>
+      </section>
+      
+       <!-- Gallery Section -->
+    <section class="gallery">
+        <img src="Images/thegame.jpg" alt="Shooting Range">
+      </section>
+
+      <section class="bug-report">
+        <h2>Bug Report: Fable 3 - Jasper Mute Glitch</h2>
+      
+        <h3>Details:</h3>
+        <p><strong>Title:</strong> Jasper Becomes Permanently Silent in the Sanctuary</p>
+        <p><strong>Priority:</strong> High</p>
+        <p><strong>Severity:</strong> Game-Breaking</p>
+      
+        <h3>Description:</h3>
+        <p>
+          This glitch causes Jasper, the butler in the Sanctuary, to become permanently silent throughout the rest of the game. Players are unable to interact with Jasper, and his icon does not appear when attempting to speak with him. Additionally, the Sanctuary shortcuts (located in the bottom-left corner of the screen and accessed via the D-Pad) also disappear and become unusable. This can significantly impact gameplay, as players may no longer be able to access certain items or functions tied to the Sanctuary.
+        </p>
+      
+        <h3>Steps to Reproduce:</h3>
+        <ol>
+          <li>Progress through the game until the Sanctuary becomes accessible.</li>
+          <li>Visit the Sanctuary multiple times and perform interactions with Jasper.</li>
+          <li>Observe that Jasper becomes silent and unresponsive after an undefined trigger.</li>
+          <li>Check the D-Pad for Sanctuary shortcuts; they will no longer appear.</li>
+        </ol>
+      
+        <h3>Expected Behavior:</h3>
+        <p>
+          Jasper should remain fully functional, providing commentary, guidance, and the ability to access specific items. The Sanctuary shortcuts should be accessible at all times.
+        </p>
+      
+        <h3>Observed Behavior:</h3>
+        <p>
+          Jasper becomes completely silent and unresponsive. The option to interact with him via his icon disappears, and the Sanctuary shortcuts on the D-Pad no longer appear or function.
+        </p>
+      
+        <h3>Root Cause:</h3>
+        <p>
+          The exact trigger for this glitch is unknown, but it appears to be tied to specific game events or actions performed in the Sanctuary. This bug may also occur in unpatched versions of the game.
+        </p>
+      
+        <h3>Solution:</h3>
+        <ul>
+          <li><strong>Investigation:</strong>
+            <ul>
+              <li>Analyzed player reports to confirm that the glitch occurs after undefined interactions within the Sanctuary.</li>
+              <li>Reviewed the game’s December patch notes, which included a fix for the issue.</li>
+            </ul>
+          </li>
+          <li><strong>Fix Implementation:</strong>
+            <ul>
+              <li>Patched the game to address Jasper’s behavior and ensure his voice and interactions reset properly upon re-entering the Sanctuary.</li>
+              <li>Restored the functionality of the Sanctuary shortcuts via the D-Pad.</li>
+            </ul>
+          </li>
+          <li><strong>Testing:</strong>
+            <ul>
+              <li>Reproduced the glitch in unpatched versions of the game and confirmed the issue.</li>
+              <li>Tested the patch to ensure Jasper’s voice and functionality returned after re-entering the Sanctuary.</li>
+              <li>Verified that the Sanctuary shortcuts reappeared and were fully operational.</li>
+            </ul>
+          </li>
+        </ul>
+      
+        <h3>Resolution:</h3>
+        <p>
+          The bug was addressed in the December patch. Players experiencing this issue are advised to ensure they have installed the latest game updates. Jasper should begin speaking again upon re-entering the Sanctuary after applying the patch.
+        </p>
+      </section>
+
+       <!-- Gallery Section -->
+    <section class="gallery">
+        <img src="Images/jasper.jpg" alt="Shooting Range">
+      </section>
+
+    <!-- Footer Section -->
+    <footer>
+      &copy; 2024 Megan Campbell. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>

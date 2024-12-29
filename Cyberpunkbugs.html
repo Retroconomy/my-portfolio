@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyberpunk 2077 Bug Reports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Ysabeau SC', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #2C6E4B, #1B4A32, #0D2A1C);
+      color: #F0EAD6;
+      scroll-behavior: smooth;
+    }
+    #content-wrapper {
+      background-color: rgba(44, 110, 75, 0.95);
+      border: 5px solid #FFFFFF;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    header {
+      background-color: #1B4A32;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 5px solid #D4AF37;
+    }
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 36px;
+      margin: 0;
+      color: #D4AF37;
+    }
+    nav {
+      background-color: #1B4A32;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      margin-bottom: 20px;
+    }
+    nav a {
+      color: #F0EAD6;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #D4AF37;
+    }
+    iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border: 3px solid #D4AF37;
+      border-radius: 10px;
+    }
+    .bug-report {
+      margin-bottom: 40px;
+    }
+    .bug-report h2 {
+      font-family: 'Merriweather', serif;
+      font-size: 28px;
+      color: #D4AF37;
+    }
+    .bug-report iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border: 3px solid #D4AF37;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border: 3px solid #D4AF37;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #1B4A32;
+      text-align: center;
+      padding: 10px;
+      border-top: 5px solid #D4AF37;
+      color: #FFFFFF;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div id="content-wrapper">
+    <!-- Header -->
+    <header>
+      <h1>Cyberpunk 2077 Bug Reports</h1>
+    </header>
+
+   <!-- Navigation Bar -->
+   <nav>
+    <a href="index.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Projects.html">Projects</a>
+    <a href="Reviews_page.html">Reviews</a>
+    <a href="QApage.html">QA Testing</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+
+   <!-- Video Viewer -->
+   <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/8X2kIfS6fb8" 
+      frameborder="0" 
+      allowfullscreen 
+      title="Cyberpunk Trailer">
+    </iframe>
+  </div>
+
+    <!-- Bug Report Section -->
+    <section class="bug-report">
+        <h2>Bug Report Example 3: Cyberpunk 2077 - T-Pose Glitch</h2>
+      
+        <h3>Details:</h3>
+        <p><strong>Title:</strong> NPCs Appear in T-Pose During Cutscenes</p>
+        <p><strong>Priority:</strong> High</p>
+        <p><strong>Severity:</strong> Critical</p>
+      
+        <h3>Description:</h3>
+        <p>
+          During certain cutscenes in Cyberpunk 2077, NPCs freeze in a T-pose instead of performing their designated animations. This glitch disrupts the cinematic experience and breaks immersion for the player.
+        </p>
+      
+        <h3>Steps to Reproduce:</h3>
+        <ol>
+          <li>Launch Cyberpunk 2077.</li>
+          <li>Start the "Heist" mission.</li>
+          <li>Play through the cutscenes in the mission.</li>
+          <li>Observe NPCs randomly switching to a T-pose during certain scenes.</li>
+        </ol>
+      
+        <h3>Expected Behavior:</h3>
+        <p>
+          NPCs should execute their assigned animations seamlessly during cutscenes, preserving the intended cinematic experience.
+        </p>
+      
+        <h3>Observed Behavior:</h3>
+        <p>
+          NPCs freeze in a T-pose instead of performing their animations, causing visual and narrative disruptions during cutscenes.
+        </p>
+      
+        <h3>Root Cause:</h3>
+        <p>
+          The T-pose glitch was caused by an animation loading error, where specific NPC assets failed to synchronize with cutscene triggers. As a fallback, NPCs defaulted to a T-pose when animation data was unavailable.
+        </p>
+      
+        <h3>Solution:</h3>
+        <ul>
+          <li><strong>Investigation:</strong>
+            <ul>
+              <li>Debugged animation event logs and identified missing asset preloading during specific cutscenes.</li>
+              <li>Confirmed that the absence of animation data led NPCs to default to a T-pose.</li>
+            </ul>
+          </li>
+          <li><strong>Fix Implementation:</strong>
+            <ul>
+              <li>Updated the animation system to preload all necessary assets before triggering cutscenes.</li>
+              <li>Introduced a fallback mechanism to load default animations instead of defaulting to a T-pose.</li>
+            </ul>
+          </li>
+          <li><strong>Testing:</strong>
+            <ul>
+              <li>Replayed multiple cutscenes, including the "Heist" mission, to verify that animations loaded correctly.</li>
+              <li>Conducted stress tests with a high number of NPCs onscreen to ensure stability under load.</li>
+            </ul>
+          </li>
+        </ul>
+      
+        <h3>Resolution:</h3>
+        <p>
+          The bug was resolved in Patch 1.21. NPC animations now load properly during cutscenes, ensuring a smooth and immersive cinematic experience.
+        </p>
+      </section>
+      
+       <!-- Gallery Section -->
+    <section class="gallery">
+        <img src="Images/Tpose.jpg" alt="Tpose">
+      </section>
+
+      <section class="bug-report">
+        <h2>Bug Report: Cyberpunk 2077 - Enemies Seeing Through Walls or when died</h2>
+      
+        <h3>Details:</h3>
+        <p><strong>Title:</strong> Enemies Spot Players Through Walls or Detect Dead Bodies</p>
+        <p><strong>Priority:</strong> High</p>
+        <p><strong>Severity:</strong> Moderate</p>
+      
+        <h3>Description:</h3>
+        <p>
+          In certain scenarios, enemies in Cyberpunk 2077 exhibit unintended behavior:
+        </p>
+        <ul>
+          <li>Enemies can detect the player through walls, breaking stealth mechanics and making stealth-focused gameplay challenging.</li>
+          <li>Dead bodies are sometimes not registered as "dead" by the game engine, causing enemies to react to them as if they were still alive.</li>
+        </ul>
+        <p>
+          These issues were frequently encountered during missions, including one in an Arasaka warehouse, but may occur in various locations throughout the game.
+        </p>
+      
+        <h3>Steps to Reproduce:</h3>
+        <ol>
+          <li>Launch Cyberpunk 2077 and load any save file.</li>
+          <li>Engage in a stealth mission (e.g., within an Arasaka warehouse).</li>
+          <li>Hide behind walls or objects and observe enemies detecting the player through barriers.</li>
+          <li>Kill an enemy and leave the body in a visible location.</li>
+          <li>Observe other enemies reacting to the dead body as though it were alive.</li>
+        </ol>
+      
+        <h3>Expected Behavior:</h3>
+        <p>
+          Enemies should:
+          <ul>
+            <li>Only detect the player when they have a clear line of sight.</li>
+            <li>React appropriately to dead bodies, acknowledging their status as deceased and not treating them as active threats.</li>
+          </ul>
+        </p>
+      
+        <h3>Observed Behavior:</h3>
+        <p>
+          <ul>
+            <li>Enemies detect the player through walls, regardless of line-of-sight mechanics.</li>
+            <li>Enemies react to dead bodies as if they were still alive, breaking immersion and stealth gameplay mechanics.</li>
+          </ul>
+        </p>
+      
+        <h3>Root Cause:</h3>
+        <p>
+          Based on preliminary analysis, the following root causes are suspected:
+          <ul>
+            <li>A miscalculation in the line-of-sight detection system for enemy AI, allowing them to "see" through walls.</li>
+            <li>An incorrect flagging system for deceased bodies, causing the game to consider them as alive in certain scenarios.</li>
+          </ul>
+        </p>
+      
+        <h3>Solution:</h3>
+        <ul>
+          <li><strong>Investigation:</strong>
+            <ul>
+              <li>Debugged AI vision logic to determine how enemies detected the player through barriers.</li>
+              <li>Analyzed body status flagging in the game engine to identify inconsistencies in the way dead bodies are registered.</li>
+            </ul>
+          </li>
+          <li><strong>Fix Implementation:</strong>
+            <ul>
+              <li>Adjusted the line-of-sight detection code to ensure enemies only spot players when an unobstructed view exists.</li>
+              <li>Corrected the body status flagging system to accurately mark bodies as deceased and remove them from active threat detection.</li>
+            </ul>
+          </li>
+          <li><strong>Testing:</strong>
+            <ul>
+              <li>Reproduced scenarios across various missions, including the Arasaka warehouse, to confirm the fixes resolved both issues.</li>
+              <li>Conducted regression testing to ensure no new bugs were introduced to the AI vision system or stealth mechanics.</li>
+            </ul>
+          </li>
+        </ul>
+      
+        <h3>Resolution:</h3>
+        <p>
+          These issues were resolved in Patch 1.1.8. Enemies now properly rely on line-of-sight mechanics to detect players and appropriately register dead bodies as non-threats. Stealth gameplay is restored to its intended functionality.
+        </p>
+      </section>
+      
+      <section class="bug-report">
+        <h2>Bug Report Example 3: Invisible or Missing NPCs/Objects</h2>
+        <h3>Details:</h3>
+        <p><strong>Title:</strong> Invisible or Missing NPCs/Objects in the Game World</p>
+        <p><strong>Priority:</strong> Medium</p>
+        <p><strong>Severity:</strong> Minor</p>
+        <h3>Description:</h3>
+        <p>
+          Cyberpunk 2077 may occasionally fail to load NPCs, vehicles, or other assets in the game world. Players have reported seeing NPCs interacting with invisible objects, ghostly glasses floating midair without anyone holding them, and cars disappearing entirely. Although these glitches are primarily visual and do not directly affect gameplay mechanics, they disrupt immersion in the open-world experience.
+        </p>
+        <h3>Steps to Reproduce:</h3>
+        <ol>
+          <li>Launch Cyberpunk 2077.</li>
+          <li>Load a save file and enter a crowded area such as a marketplace or busy street.</li>
+          <li>Observe NPCs and objects in the environment.</li>
+          <li>Note instances of missing NPCs, cars, or objects like glasses floating without a holder.</li>
+        </ol>
+        <h3>Expected Behavior:</h3>
+        <p>
+          All NPCs, vehicles, and objects in the environment should be visible and interactable as intended, contributing to a seamless open-world experience.
+        </p>
+        <h3>Observed Behavior:</h3>
+        <p>
+          NPCs, cars, and objects intermittently fail to load, resulting in floating glasses, invisible cars, or NPCs interacting with non-existent objects. Reloading the game save often resolves the issue temporarily.
+        </p>
+        <h3>Root Cause:</h3>
+        <p>
+          Asset streaming and memory management issues caused certain game assets to fail during loading. When too many objects were requested simultaneously, the system prioritized gameplay-critical assets over secondary visuals.
+        </p>
+        <h3>Solution:</h3>
+        <ul>
+          <li><strong>Investigation:</strong>
+            <ul>
+              <li>Used debug tools to monitor asset streaming and memory allocation during busy scenes.</li>
+              <li>Identified bottlenecks in the asset-loading system, particularly during high-demand scenarios.</li>
+            </ul>
+          </li>
+          <li><strong>Fix Implementation:</strong>
+            <ul>
+              <li>Optimized the asset-streaming system to load both gameplay-critical and secondary assets efficiently.</li>
+              <li>Introduced a prioritization queue to ensure all NPCs, vehicles, and objects in the player's immediate vicinity are loaded correctly.</li>
+            </ul>
+          </li>
+          <li><strong>Testing:</strong>
+            <ul>
+              <li>Simulated high-demand scenarios with crowded areas and fast travel to stress-test the updated system.</li>
+              <li>Verified that all assets loaded correctly across multiple save files and hardware configurations.</li>
+            </ul>
+          </li>
+        </ul>
+        <h3>Resolution:</h3>
+        <p>
+          Fixed in Patch 1.22. Asset streaming has been optimized, significantly reducing the occurrence of missing NPCs, cars, and objects.
+        </p>
+      </section>
+      
+         <!-- Video Viewer -->
+   <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/hn8wQi8IH5o" 
+      frameborder="0" 
+      allowfullscreen 
+      title="Cyberpunk Trailer">
+    </iframe>
+  </div>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2024 Megan Campbell. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
