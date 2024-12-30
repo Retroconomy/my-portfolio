@@ -34,38 +34,37 @@
     }
 
     /* Navigation Bar Styling */
-    nav {
-      background-color: #1B4A32;
-      padding: 10px;
-      text-align: center;
-    }
+   <style>
+  nav {
+    background-color: #1B4A32;
+    padding: 10px;
+    text-align: center;
+  }
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Mobile Responsive Navigation */
+  @media (max-width: 768px) {
     nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-size: 18px;
+      display: block;
+      margin: 10px 0;
+      font-size: 16px;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
+  }
 
-    /* Responsive Navigation Bar for Mobile */
-    @media (max-width: 768px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-        font-size: 16px;
-      }
+  @media (max-width: 480px) {
+    nav a {
+      font-size: 14px;
     }
-
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 24px;
-      }
-      nav a {
-        font-size: 14px;
-      }
-    }
+  }
+</style>
 
     section {
       margin: 20px 0;
@@ -126,39 +125,6 @@
   <a href="Reviews_page.html">Reviews</a>
   <a href="Contact.html">Contact</a>
 </nav>
-
-<style>
-  nav {
-    background-color: #1B4A32;
-    padding: 10px;
-    text-align: center;
-  }
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  nav a:hover {
-    text-decoration: underline;
-  }
-
-  /* Mobile Responsive Navigation */
-  @media (max-width: 768px) {
-    nav a {
-      display: block;
-      margin: 10px 0;
-      font-size: 16px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    nav a {
-      font-size: 14px;
-    }
-  }
-</style>
-
 
     <!-- Introduction -->
     <section>
