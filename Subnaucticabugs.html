@@ -32,24 +32,41 @@
       margin: 0;
       color: #D4AF37;
     }
+
+    /* Navigation Bar Styling */
     nav {
       background-color: #1B4A32;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-      margin-bottom: 20px;
+      padding: 10px;
+      text-align: center;
     }
     nav a {
-      color: #F0EAD6;
+      color: white;
       margin: 0 15px;
       text-decoration: none;
       font-size: 18px;
-      font-weight: bold;
-      transition: color 0.3s;
     }
     nav a:hover {
-      color: #D4AF37;
+      text-decoration: underline;
     }
+
+    /* Responsive Navigation Bar for Mobile */
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 24px;
+      }
+      nav a {
+        font-size: 14px;
+      }
+    }
+
     section {
       margin: 20px 0;
     }
@@ -63,10 +80,12 @@
       font-size: 20px;
       margin-bottom: 10px;
     }
+
     .bug-report {
       margin-bottom: 30px;
       line-height: 1.6;
     }
+
     iframe {
       width: 100%;
       max-width: 800px;
@@ -76,6 +95,13 @@
       margin: 20px auto;
       display: block;
     }
+
+    @media (max-width: 768px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
     footer {
       background-color: #1B4A32;
       text-align: center;
@@ -93,7 +119,7 @@
       <h1>Subnautica Bug Reports</h1>
     </header>
 
-    <!-- Navigation Bar -->
+    <!-- Updated Navigation Bar -->
     <nav>
       <a href="index.html">Home</a>
       <a href="QApage.html">QA Testing</a>
@@ -105,7 +131,7 @@
     <!-- Introduction -->
     <section>
       <h2>Introduction</h2>
-      <p>
+  <p>
         This page documents some of the most interesting and impactful bugs I encountered while playing <strong>Subnautica</strong>. Despite these glitches, Subnautica remains one of the most immersive and influential games I’ve played. Each bug is documented with details of its reproduction, analysis, and resolution, highlighting the intricate process of debugging and improving a game.
       </p>
     </section>
@@ -114,7 +140,7 @@
     <section>
       <h2>Subnautica Trailer</h2>
       <iframe 
-        src="https://www.youtube.com/embed/_7BzngvURrk?si=dz1n9CDcIY21rBGv" 
+        src="https://www.youtube.com/embed/_7BzngvURrk" 
         frameborder="0" 
         allowfullscreen 
         title="Subnautica Official Trailer">
@@ -123,8 +149,7 @@
 
     <!-- Bug Reports -->
     <section class="bug-report">
-        <section class="bug-report">
-            <h2>Bug Report Example 1: Infinite Oxygen Bug</h2>
+        <h2>Bug Report Example 1: Infinite Oxygen Bug</h2>
             <h3>Details:</h3>
             <p><strong>Title:</strong> Infinite Oxygen Bug Occurs walking through portal with prawn suit.
             <p><strong>Priority:</strong> High</p>
@@ -182,20 +207,17 @@
               The bug was fixed in Patch 1.1.25. Players now experience normal oxygen depletion after exiting the Seamoth or Prawn Suit after entering/leaving a portal.
             </p>
           
-            <h3>Video Evidence:</h3>
-            <iframe 
-              src="https://www.youtube.com/embed/iTCH7my_ZD0" 
-              frameborder="0" 
-              allowfullscreen 
-              title="Subnautica Infinite Oxygen Bug">
-            </iframe>
-          </section>
-          
-        
+
+      <iframe 
+        src="https://www.youtube.com/embed/iTCH7my_ZD0" 
+        frameborder="0" 
+        allowfullscreen 
+        title="Subnautica Infinite Oxygen Bug">
       </iframe>
-  
+    </section>
 
     <section class="bug-report">
+         <section class="bug-report">
         <h2>Bug Report Example 2: Missing Terrain Collision</h2>
         <h3>Details:</h3>
         <p><strong>Title:</strong> Seamoth Can Fall Through terrain</p>
@@ -250,19 +272,16 @@
           </li>
         </ul>
         
-        
-      </section>
-      
-      <iframe 
-      src="https://www.youtube.com/embed/XgC-rjim_TE" 
-      frameborder="0" 
-      allowfullscreen 
-      title="Subnautica seamoth stuck">
-  </iframe>
-  
-  </section>
 
-  <section class="bug-report">
+      <iframe 
+        src="https://www.youtube.com/embed/XgC-rjim_TE" 
+        frameborder="0" 
+        allowfullscreen 
+        title="Subnautica Seamoth Collision Bug">
+      </iframe>
+    </section>
+
+   <section class="bug-report">
     <h2>Bug Report Example: Subnautica - Cyclops Launch Glitch</h2>
     <h3>Details:</h3>
     <p><strong>Title:</strong> Player Gets Launched Out of Cyclops When Running into Storage Bay</p>
@@ -324,16 +343,13 @@
         The bug was resolved and Players can now sprint into the Cyclops storage bay without being launched out of the submarine.
     </p>
 
-    <iframe 
+      <iframe 
         src="https://www.youtube.com/embed/NGzuvKOY2xc" 
         frameborder="0" 
         allowfullscreen 
         title="Cyclops Launch Glitch">
-    </iframe>
-</section>
-
-
-   
+      </iframe>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -342,4 +358,5 @@
   </div>
 </body>
 </html>
+
 
