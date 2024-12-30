@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QA Testing Portfolio - Megan Campbell</title>
-  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Ysabeau SC', sans-serif;
@@ -32,25 +32,23 @@
       margin: 0;
       color: #D4AF37;
     }
+
+    /* Updated Navigation Bar */
     nav {
       background-color: #1B4A32;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
+      padding: 10px;
+      text-align: center;
     }
     nav a {
-      color: #F0EAD6;
-      margin: 5px 10px;
+      color: white;
+      margin: 0 15px;
       text-decoration: none;
       font-size: 18px;
-      font-weight: bold;
-      transition: color 0.3s;
     }
     nav a:hover {
-      color: #D4AF37;
+      text-decoration: underline;
     }
+
     .introduction {
       text-align: center;
       margin: 30px 0;
@@ -74,7 +72,7 @@
     }
     .slide img {
       width: 100%;
-      height: auto; /* Adjust height for mobile */
+      height: auto; /* Adjust for mobile responsiveness */
       object-fit: cover;
       border: 3px solid #D4AF37;
       border-radius: 10px;
@@ -112,45 +110,6 @@
       color: #FFFFFF;
       font-size: 14px;
     }
-
-    /* Mobile Styles */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 28px;
-      }
-      nav a {
-        font-size: 16px;
-        margin: 5px;
-      }
-      .introduction h2 {
-        font-size: 24px;
-      }
-      .introduction p {
-        font-size: 14px;
-      }
-      .prev, .next {
-        font-size: 20px;
-        padding: 8px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 24px;
-      }
-      nav {
-        flex-direction: column;
-      }
-      nav a {
-        font-size: 14px;
-      }
-      .introduction h2 {
-        font-size: 20px;
-      }
-      .introduction p {
-        font-size: 12px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -160,46 +119,46 @@
       <h1>QA Testing Portfolio</h1>
     </header>
 
-    <!-- Navigation Bar -->
+    <!-- Updated Navigation Bar -->
     <nav>
       <a href="index.html">Home</a>
       <a href="About.html">About</a>
       <a href="Projects.html">Projects</a>
+      <a href="Contact.html">Contact</a>
       <a href="Reviews_page.html">Reviews</a>
       <a href="QApage.html">QA Testing</a>
-      <a href="Contact.html">Contact</a>
     </nav>
 
     <!-- Introduction Section -->
     <section class="introduction">
-        <h2>Introduction</h2>
-        <p>
-          Welcome to the QA Testing section of my portfolio. Here, I will showcase the bugs and glitches that I’ve discovered in some of the games that have profoundly shaped my gaming experience. These are games I’ve poured countless hours into, only to be met with moments that have brought me to tears—not because of the story, but because of the bugs that made me want to rage quit and avoid gaming altogether for days, sometimes even weeks.
-        </p>
-        <p>
-          Bugs and glitches are often part of the charm of smaller studios working under tight budgets and deadlines. Take, for example, <strong>Subnautica</strong>, a game developed by a small, passionate team. During its early development, the studio faced challenges so dire they almost shut down. However, thanks to YouTube creators like Jacksepticeye and Markiplier, who brought attention to the game, Subnautica's community grew exponentially. This community’s support allowed the game to reach its full potential, turning it into an unforgettable masterpiece.
-        </p>
-        <p>
-          In this section, we will explore some of the bugs that impacted games like <strong>Fable 3</strong>, <strong>Cyberpunk 2077</strong>, and <strong>Subnautica</strong>. These issues, while frustrating, highlight the complexities of game development and the dedication of developers to deliver fixes and improvements. Join me as we delve into the fascinating world of game QA and celebrate the triumphs that turned glitches into growth.
-        </p>
+      <h2>Introduction</h2>
+      <p>
+        Welcome to the QA Testing section of my portfolio. Here, I will showcase the bugs and glitches that I’ve discovered in some of the games that have profoundly shaped my gaming experience. These are games I’ve poured countless hours into, only to be met with moments that have brought me to tears—not because of the story, but because of the bugs that made me want to rage quit and avoid gaming altogether for days, sometimes even weeks.
+      </p>
+      <p>
+        Bugs and glitches are often part of the charm of smaller studios working under tight budgets and deadlines. Take, for example, <strong>Subnautica</strong>, a game developed by a small, passionate team. During its early development, the studio faced challenges so dire they almost shut down. However, thanks to YouTube creators like Jacksepticeye and Markiplier, who brought attention to the game, Subnautica's community grew exponentially. This community’s support allowed the game to reach its full potential, turning it into an unforgettable masterpiece.
+      </p>
+      <p>
+        In this section, we will explore some of the bugs that impacted games like <strong>Fable 3</strong>, <strong>Cyberpunk 2077</strong>, and <strong>Subnautica</strong>. These issues, while frustrating, highlight the complexities of game development and the dedication of developers to deliver fixes and improvements. Join me as we delve into the fascinating world of game QA and celebrate the triumphs that turned glitches into growth.
+      </p>
     </section>
 
     <!-- Slideshow Section -->
     <section class="slideshow-container">
       <div class="slide active">
-          <a href="Subnaucticabugs.html">
-              <img src="Images/Subnauctica1.jpg" alt="Subnautica Bug Reports">
-          </a>
+        <a href="Subnaucticabugs.html">
+          <img src="Images/Subnauctica1.jpg" alt="Subnautica Bug Reports">
+        </a>
       </div>
       <div class="slide">
-          <a href="Cyberpunkbugs.html">
-              <img src="Images/Cyberpunk1.jpg" alt="Cyberpunk Bug Reports">
-          </a>
+        <a href="Cyberpunkbugs.html">
+          <img src="Images/Cyberpunk1.jpg" alt="Cyberpunk Bug Reports">
+        </a>
       </div>
       <div class="slide">
-          <a href="Fable3bugs.html">
-              <img src="Images/Fable3cover.jpg" alt="Fable 3 Bug Reports">
-          </a>
+        <a href="Fable3bugs.html">
+          <img src="Images/Fable3cover.jpg" alt="Fable 3 Bug Reports">
+        </a>
       </div>
       <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
       <button class="next" onclick="changeSlide(1)">&#10095;</button>
@@ -207,7 +166,7 @@
 
     <!-- Footer Section -->
     <footer>
-      &copy; 2024 Megan Campbell. All rights reserved.
+      <p>&copy; 2024 Megan Campbell. All rights reserved.</p>
     </footer>
   </div>
 
