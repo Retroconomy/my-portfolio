@@ -34,36 +34,38 @@
     }
 
     /* Navigation Bar Styling */
-   <style>
-  nav {
-    background-color: #1B4A32;
-    padding: 10px;
-    text-align: center;
-  }
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  nav a:hover {
-    text-decoration: underline;
-  }
-
-  /* Mobile Responsive Navigation */
-  @media (max-width: 768px) {
-    nav a {
-      display: block;
-      margin: 10px 0;
-      font-size: 16px;
+ nav {
+      background-color: #1B4A32;
+      padding: 10px;
+      text-align: center;
     }
-  }
-
-  @media (max-width: 480px) {
     nav a {
-      font-size: 14px;
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
     }
-  }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Navigation Bar for Mobile */
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 24px;
+      }
+      nav a {
+        font-size: 14px;
+      }
+    }
 </style>
 
     section {
