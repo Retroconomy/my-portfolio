@@ -6,8 +6,9 @@
   <title>Megan Campbell - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&family=Merriweather:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0-beta3/css/all.min.css">
+
   <style>
-    /* General Styles */
+    /* General Body Styles */
     body {
       font-family: 'Ysabeau SC', sans-serif;
       margin: 0;
@@ -15,6 +16,8 @@
       color: #F0EAD6;
       scroll-behavior: smooth;
     }
+
+    /* Content Wrapper */
     #content-wrapper {
       background-color: rgba(44, 110, 75, 0.95);
       border: 5px solid #FFFFFF;
@@ -23,7 +26,7 @@
       padding: 0;
     }
 
-    /* Header */
+    /* Header Section */
     header {
       background-color: #1B4A32;
       padding: 20px;
@@ -103,6 +106,16 @@
       margin-top: 20px;
       width: 150px;
       height: auto;
+    }
+
+    /* Reviews Heading */
+    .reviews-heading {
+      text-align: center;
+      color: #D4AF37;
+      font-family: 'Merriweather', serif;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 32px;
     }
 
     /* Slideshow Section */
@@ -185,11 +198,13 @@
   </style>
 </head>
 <body>
+  <!-- Main Content Wrapper -->
   <div id="content-wrapper">
+
     <!-- Header Section -->
     <header>
       <h1>Megan Campbell</h1>
-      <img src="Images/main photo for website.png" alt="Megan Campbell" class="profile-image">
+      <img src="Images/main_photo_for_website.png" alt="Megan Campbell" class="profile-image">
     </header>
 
     <!-- Navigation Bar -->
@@ -198,7 +213,6 @@
       <a href="Projects.html">Projects</a>
       <a href="Reviews_page.html">Reviews</a>
       <a href="QApage.html">QA Testing</a>
-    
       <a href="Contact.html">Contact</a>
     </nav>
 
@@ -229,12 +243,12 @@
       </div>
       <div class="slide">
         <a href="Game2_review.html">
-          <img src="Images/posters fable.jpg" alt="Fable 3">
+          <img src="Images/posters_fable.jpg" alt="Fable 3">
         </a>
       </div>
       <div class="slide">
         <a href="Game3_review.html">
-          <img src="Images/cozy grove 2.png" alt="Cozy Grove">
+          <img src="Images/cozy_grove_2.png" alt="Cozy Grove">
         </a>
       </div>
       <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
@@ -247,6 +261,7 @@
     </footer>
   </div>
 
+  <!-- Slideshow JavaScript -->
   <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
@@ -259,4 +274,5 @@
   </script>
 </body>
 </html>
+
 
