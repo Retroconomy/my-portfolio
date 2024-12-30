@@ -27,7 +27,6 @@
       border-bottom: 5px solid #D4AF37;
     }
     header h1 {
-      font-family: 'Merriweather', serif;
       font-size: 36px;
       margin: 0;
       color: #D4AF37;
@@ -49,16 +48,34 @@
       text-decoration: underline;
     }
 
+    /* Mobile Optimized Navigation */
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 24px;
+      }
+      nav a {
+        font-size: 14px;
+      }
+    }
+
     .introduction {
       text-align: center;
       margin: 30px 0;
       line-height: 1.6;
     }
     .introduction h2 {
-      font-family: 'Merriweather', serif;
       font-size: 32px;
       color: #D4AF37;
     }
+
     .slideshow-container {
       position: relative;
       max-width: 100%;
@@ -182,3 +199,4 @@
   </script>
 </body>
 </html>
+
