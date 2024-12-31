@@ -6,6 +6,7 @@
   <title>Cyberpunk 2077 Bug Reports</title>
   <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&family=Merriweather:wght@700&display=swap" rel="stylesheet">
   <style>
+    /* General Styling */
     body {
       font-family: 'Ysabeau SC', sans-serif;
       margin: 0;
@@ -13,6 +14,7 @@
       color: #F0EAD6;
       scroll-behavior: smooth;
     }
+
     #content-wrapper {
       background-color: rgba(44, 110, 75, 0.95);
       border: 5px solid #FFFFFF;
@@ -20,51 +22,65 @@
       margin: auto;
       padding: 20px;
     }
+
+    /* Header */
     header {
       background-color: #1B4A32;
       padding: 20px;
       text-align: center;
       border-bottom: 5px solid #D4AF37;
     }
+
     header h1 {
       font-family: 'Merriweather', serif;
       font-size: 36px;
       margin: 0;
       color: #D4AF37;
     }
+
+    /* Navigation Bar */
     nav {
       background-color: #1B4A32;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
       padding: 10px 0;
       margin-bottom: 20px;
     }
+
     nav a {
       color: #F0EAD6;
-      margin: 0 15px;
       text-decoration: none;
       font-size: 18px;
       font-weight: bold;
-      transition: color 0.3s;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
     }
+
     nav a:hover {
-      color: #D4AF37;
+      background-color: #D4AF37;
+      color: #1B4A32;
     }
-    iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px;
-      border: 3px solid #D4AF37;
-      border-radius: 10px;
-    }
+
+    /* Bug Reports */
     .bug-report {
       margin-bottom: 40px;
     }
+
     .bug-report h2 {
       font-family: 'Merriweather', serif;
       font-size: 28px;
       color: #D4AF37;
+      margin-bottom: 15px;
     }
+
+    .bug-report p, .bug-report li {
+      line-height: 1.6;
+      font-size: 18px;
+    }
+
     .bug-report iframe {
       width: 100%;
       max-width: 800px;
@@ -73,12 +89,15 @@
       border-radius: 10px;
       margin: 20px 0;
     }
+
+    /* Gallery */
     .gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
+
     .gallery img {
       width: 300px;
       height: 200px;
@@ -86,6 +105,8 @@
       border: 3px solid #D4AF37;
       border-radius: 10px;
     }
+
+    /* Footer */
     footer {
       background-color: #1B4A32;
       text-align: center;
@@ -93,6 +114,55 @@
       border-top: 5px solid #D4AF37;
       color: #FFFFFF;
       font-size: 14px;
+      margin-top: 20px;
+    }
+
+    /* Mobile Optimization */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      nav a {
+        font-size: 16px;
+        padding: 10px 15px;
+      }
+
+      .bug-report h2 {
+        font-size: 24px;
+      }
+
+      .bug-report p, .bug-report li {
+        font-size: 16px;
+      }
+
+      .bug-report iframe {
+        height: 300px;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+      footer {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      nav {
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
     }
   </style>
 </head>
@@ -103,25 +173,25 @@
       <h1>Cyberpunk 2077 Bug Reports</h1>
     </header>
 
-   <!-- Navigation Bar -->
-   <nav>
-    <a href="index.html">Home</a>
-    <a href="About.html">About</a>
-    <a href="Projects.html">Projects</a>
-    <a href="Reviews_page.html">Reviews</a>
-    <a href="QApage.html">QA Testing</a>
-    <a href="Contact.html">Contact</a>
-  </nav>
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Projects.html">Projects</a>
+      <a href="Reviews_page.html">Reviews</a>
+      <a href="QApage.html">QA Testing</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
 
-   <!-- Video Viewer -->
-   <div class="video-container">
-    <iframe 
-      src="https://www.youtube.com/embed/8X2kIfS6fb8" 
-      frameborder="0" 
-      allowfullscreen 
-      title="Cyberpunk Trailer">
-    </iframe>
-  </div>
+    <!-- Video Viewer -->
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/8X2kIfS6fb8" 
+        frameborder="0" 
+        allowfullscreen 
+        title="Cyberpunk Trailer">
+      </iframe>
+    </div>
 
     <!-- Bug Report Section -->
     <section class="bug-report">
@@ -342,6 +412,11 @@
     </iframe>
   </div>
 
+    <!-- Gallery Section -->
+    <section class="gallery">
+      <img src="Images/Tpose.jpg" alt="Tpose">
+    </section>
+
     <!-- Footer -->
     <footer>
       &copy; 2024 Megan Campbell. All rights reserved.
@@ -349,3 +424,4 @@
   </div>
 </body>
 </html>
+
