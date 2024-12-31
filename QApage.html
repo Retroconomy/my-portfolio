@@ -6,6 +6,7 @@
   <title>QA Testing Portfolio - Megan Campbell</title>
   <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap" rel="stylesheet">
   <style>
+    /* General Styles */
     body {
       font-family: 'Ysabeau SC', sans-serif;
       margin: 0;
@@ -32,7 +33,7 @@
       color: #D4AF37;
     }
 
-    /* Updated Navigation Bar */
+    /* Navigation Bar */
     nav {
       background-color: #1B4A32;
       padding: 10px;
@@ -66,6 +67,7 @@
       }
     }
 
+    /* Introduction Section */
     .introduction {
       text-align: center;
       margin: 30px 0;
@@ -77,56 +79,58 @@
     }
 
     /* Slideshow container styling */
-  .slideshow-container {
-    position: relative;
-    max-width: 800px; /* Set max width for the slideshow */
-    height: 450px; /* Set a fixed height for consistency */
-    margin: 50px auto;
-    overflow: hidden;
-    border-radius: 8px;
-    background-color: #1B4A32; /* Optional: fallback background color */
-  }
+    .slideshow-container {
+      position: relative;
+      max-width: 800px;
+      height: 450px;
+      margin: 50px auto;
+      overflow: hidden;
+      border-radius: 8px;
+      background-color: #1B4A32;
+    }
 
-  /* Slide styling */
-  .slide {
-    display: none;
-    width: 100%;
-    height: 100%; /* Ensure slides fill the container */
-  }
+    /* Slide styling */
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+    .slide.active {
+      display: block;
+    }
 
-  /* Image styling */
-  .slide img {
-    width: 100%;
-    height: 100%; /* Maintain fixed size */
-    object-fit: cover; /* Ensures images fill the container without distortion */
-  }
+    /* Image styling */
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-  /* Navigation buttons */
-  .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #F0EAD6;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
+    /* Navigation buttons */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #F0EAD6;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .prev:hover, .next:hover {
+      background-color: #D4AF37;
+    }
+    .prev {
+      left: 10px;
+    }
+    .next {
+      right: 10px;
+    }
 
-  .prev:hover, .next:hover {
-    background-color: #D4AF37;
-  }
-
-  .prev {
-    left: 10px;
-  }
-
-  .next {
-    right: 10px;
-  }
+    /* Footer */
     footer {
       background-color: #1B4A32;
       text-align: center;
@@ -144,7 +148,7 @@
       <h1>QA Testing Portfolio</h1>
     </header>
 
-    <!-- Updated Navigation Bar -->
+    <!-- Navigation Bar -->
     <nav>
       <a href="index.html">Home</a>
       <a href="About.html">About</a>
@@ -157,15 +161,7 @@
     <!-- Introduction Section -->
     <section class="introduction">
       <h2>Introduction</h2>
-      <p>
-        Welcome to the QA Testing section of my portfolio. Here, I will showcase the bugs and glitches that I’ve discovered in some of the games that have profoundly shaped my gaming experience. These are games I’ve poured countless hours into, only to be met with moments that have brought me to tears—not because of the story, but because of the bugs that made me want to rage quit and avoid gaming altogether for days, sometimes even weeks.
-      </p>
-      <p>
-        Bugs and glitches are often part of the charm of smaller studios working under tight budgets and deadlines. Take, for example, <strong>Subnautica</strong>, a game developed by a small, passionate team. During its early development, the studio faced challenges so dire they almost shut down. However, thanks to YouTube creators like Jacksepticeye and Markiplier, who brought attention to the game, Subnautica's community grew exponentially. This community’s support allowed the game to reach its full potential, turning it into an unforgettable masterpiece.
-      </p>
-      <p>
-        In this section, we will explore some of the bugs that impacted games like <strong>Fable 3</strong>, <strong>Cyberpunk 2077</strong>, and <strong>Subnautica</strong>. These issues, while frustrating, highlight the complexities of game development and the dedication of developers to deliver fixes and improvements. Join me as we delve into the fascinating world of game QA and celebrate the triumphs that turned glitches into growth.
-      </p>
+      <p>Welcome to the QA Testing section of my portfolio. Here, I will showcase the bugs and glitches...</p>
     </section>
 
     <!-- Slideshow Section -->
@@ -195,6 +191,7 @@
     </footer>
   </div>
 
+  <!-- JavaScript -->
   <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
@@ -207,4 +204,5 @@
   </script>
 </body>
 </html>
+
 
