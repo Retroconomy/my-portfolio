@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+mobile optimize like the QApage.html keep desktop the same  <!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -32,6 +32,8 @@
       margin: 0;
       color: #D4AF37;
     }
+
+    /* Navigation Bar Styling */
     nav {
       background-color: #1B4A32;
       padding: 10px;
@@ -46,6 +48,8 @@
     nav a:hover {
       text-decoration: underline;
     }
+
+    /* Responsive Navigation Bar for Mobile */
     @media (max-width: 768px) {
       nav a {
         display: block;
@@ -53,6 +57,7 @@
         font-size: 16px;
       }
     }
+
     @media (max-width: 480px) {
       header h1 {
         font-size: 24px;
@@ -61,6 +66,7 @@
         font-size: 14px;
       }
     }
+
     section {
       margin: 20px 0;
     }
@@ -74,10 +80,12 @@
       font-size: 20px;
       margin-bottom: 10px;
     }
+
     .bug-report {
       margin-bottom: 30px;
       line-height: 1.6;
     }
+
     iframe {
       width: 100%;
       max-width: 800px;
@@ -87,11 +95,13 @@
       margin: 20px auto;
       display: block;
     }
+
     @media (max-width: 768px) {
       iframe {
         height: 300px;
       }
     }
+
     footer {
       background-color: #1B4A32;
       text-align: center;
@@ -120,8 +130,10 @@
 
     <!-- Introduction -->
     <section>
+     <!-- Introduction -->
+    <section>
       <h2>Introduction</h2>
-      <p>
+  <p>
         This page documents some of the most interesting and impactful bugs I encountered while playing <strong>Subnautica</strong>. Despite these glitches, Subnautica remains one of the most immersive and influential games I’ve played. Each bug is documented with details of its reproduction, analysis, and resolution, highlighting the intricate process of debugging and improving a game.
       </p>
     </section>
@@ -137,65 +149,66 @@
       </iframe>
     </section>
 
-    <!-- Bug Reports Section -->
+    <!-- Bug Reports -->
     <section class="bug-report">
-      <h2>Bug Report Example 1: Infinite Oxygen Bug</h2>
-      <h3>Details:</h3>
-      <p><strong>Title:</strong> Infinite Oxygen Bug Occurs walking through portal with Prawn Suit.</p>
-      <p><strong>Priority:</strong> High</p>
-      <p><strong>Severity:</strong> Critical</p>
-
-      <h3>Description:</h3>
-      <p>
-        Players experience infinite oxygen after exiting/entering the Prawn Suit. The oxygen meter freezes at maximum, giving players the ability to stay underwater indefinitely without the need to resurface. The only way to reset the bug is to quit your game and log back in.
-      </p>
-
-      <h3>Steps to Reproduce:</h3>
-      <ol>
-        <li>Launch Subnautica.</li>
-        <li>Load a save file where the Prawn Suit is available.</li>
-        <li>Walk to the portal with the Prawn Suit on.</li>
-        <li>Exit the vehicle.</li>
-        <li>Observe the oxygen meter—it does not decrease, even while underwater.</li>
-      </ol>
-
-      <h3>Expected Behavior:</h3>
-      <p>
-        The oxygen meter should begin to decrease when players are underwater after exiting the Prawn Suit, as these vehicles no longer provide oxygen once the player has exited.
-      </p>
-
-      <h3>Observed Behavior:</h3>
-      <p>
-        The oxygen meter remains frozen at maximum, granting the player infinite oxygen. This allows for unlimited underwater exploration but breaks immersion and gameplay balance.
-      </p>
-
-      <h3>Root Cause:</h3>
-      <p>
-        A flag in the oxygen meter system was not being reset correctly when the player exited the Prawn Suit.
-      </p>
-
-      <h3>Solution:</h3>
-      <ul>
-        <li><strong>Investigation:</strong> Debug logs revealed that the <code>isInsideVehicle</code> boolean remained set to <code>true</code> after exiting the Prawn Suit.</li>
-        <li><strong>Fix Implementation:</strong>
-          <ul>
-            <li>Added a <code>resetOxygenStatus()</code> function to the vehicle exit event listener.</li>
-            <li>Ensured the <code>isInsideVehicle</code> flag was set to <code>false</code> upon exit, regardless of water depth.</li>
-            <li>Updated shallow water logic to correctly switch oxygen sources between the vehicle and the player.</li>
-          </ul>
-        </li>
-        <li><strong>Testing:</strong>
-          <ul>
-            <li>Reproduced the bug scenario after applying the fix to verify the oxygen meter behaved as expected.</li>
-            <li>Conducted regression testing in both shallow and deep water to ensure no new bugs were introduced.</li>
-          </ul>
-        </li>
-      </ul>
-
-      <h3>Resolution:</h3>
-      <p>
-        The bug was fixed in Patch 1.1.25. Players now experience normal oxygen depletion after exiting the Prawn Suit after entering/leaving a portal.
-      </p>
+        <h2>Bug Report Example 1: Infinite Oxygen Bug</h2>
+            <h3>Details:</h3>
+            <p><strong>Title:</strong> Infinite Oxygen Bug Occurs walking through portal with prawn suit.
+            <p><strong>Priority:</strong> High</p>
+            <p><strong>Severity:</strong> Critical</p>
+          
+            <h3>Description:</h3>
+            <p>
+              Players experience infinite oxygen after exiting/entering Prawn Suit. The oxygen meter freezes at maximum, giving players the ability to stay underwater indefinitely without the need to resurface. Only way to reset the bug is to quit your game and log back in.
+            </p>
+          
+            <h3>Steps to Reproduce:</h3>
+            <ol>
+              <li>Launch Subnautica.</li>
+              <li>Load a save file where the Prawn Suit is available.</li>
+              <li>walk to the portal with prawnsuit on.</li>
+              <li>Exit the vehicle.</li>
+              <li>Observe the oxygen meter—it does not decrease, even while underwater.</li>
+            </ol>
+          
+            <h3>Expected Behavior:</h3>
+            <p>
+              The oxygen meter should begin to decrease when players are underwater after exiting the Seamoth or Prawn Suit, as these vehicles no longer provide oxygen once the player has exited.
+            </p>
+          
+            <h3>Observed Behavior:</h3>
+            <p>
+              The oxygen meter remains frozen at maximum, granting the player infinite oxygen. This allows for unlimited underwater exploration but breaks immersion and gameplay balance.
+            </p>
+          
+            <h3>Root Cause:</h3>
+            <p>
+              A flag in the oxygen meter system was not being reset correctly when the player exited the Seamoth or Prawn Suit. 
+            </p>
+          
+            <h3>Solution:</h3>
+            <ul>
+              <li><strong>Investigation:</strong> Debug logs revealed that the <code>isInsideVehicle</code> boolean remained set to <code>true</code> after exiting the Seamoth or Prawn Suit.</li>
+              <li><strong>Fix Implementation:</strong> 
+                <ul>
+                  <li>Added a <code>resetOxygenStatus()</code> function to the vehicle exit event listener.</li>
+                  <li>Ensured the <code>isInsideVehicle</code> flag was set to <code>false</code> upon exit, regardless of water depth.</li>
+                  <li>Updated shallow water logic to correctly switch oxygen sources between the vehicle and the player.</li>
+                </ul>
+              </li>
+              <li><strong>Testing:</strong>
+                <ul>
+                  <li>Reproduced the bug scenario after applying the fix to verify the oxygen meter behaved as expected.</li>
+                  <li>Conducted regression testing in both shallow and deep water to ensure no new bugs were introduced.</li>
+                </ul>
+              </li>
+            </ul>
+          
+            <h3>Resolution:</h3>
+            <p>
+              The bug was fixed in Patch 1.1.25. Players now experience normal oxygen depletion after exiting the Seamoth or Prawn Suit after entering/leaving a portal.
+            </p>
+          
 
       <iframe 
         src="https://www.youtube.com/embed/iTCH7my_ZD0" 
@@ -205,18 +218,62 @@
       </iframe>
     </section>
 
-    <!-- Additional Bug Reports -->
     <section class="bug-report">
-      <h2>Bug Report Example 2: Missing Terrain Collision</h2>
-      <h3>Details:</h3>
-      <p><strong>Title:</strong> Seamoth Can Fall Through Terrain</p>
-      <p><strong>Priority:</strong> Medium</p>
-      <p><strong>Severity:</strong> Major</p>
-
-      <h3>Description:</h3>
-      <p>
-        Seamoth can fall through the terrain, causing it to get stuck under the map. This issue prevents further exploration.
-      </p>
+         <section class="bug-report">
+        <h2>Bug Report Example 2: Missing Terrain Collision</h2>
+        <h3>Details:</h3>
+        <p><strong>Title:</strong> Seamoth Can Fall Through terrain</p>
+        <p><strong>Priority:</strong> Medium</p>
+        <p><strong>Severity:</strong> Major</p>
+        
+        <h3>Description:</h3>
+        <p>
+          Seamoth can fall through the terrain causing them to get stuck under the map. This issue prevents further exploration.
+        </p>
+        
+        <h3>Steps to Reproduce:</h3>
+        <ol>
+          <li>Launch Subnautica.</li>
+          <li>Load a save file where the seamoth is stuck.</li>
+          <li>Attempt to walk over the terrain near the seamoth.</li>
+          <li>Observe the seamoth falling through the terrain.</li>
+        </ol>
+        
+        <h3>Expected Behavior:</h3>
+        <p>
+          seamoth shouldnt be able to get stuck on the terrain without falling through it, maintaining a smooth exploration experience.
+        
+        <h3>Observed Behavior:</h3>
+        <p>
+          seamoth falls through the terrain and become trapped under the map, breaking immersion and requiring a game reload to escape.
+        </p>
+        
+        <h3>Root Cause:</h3>
+        <p>
+          The terrain mesh in the affected area had a missing collision layer, allowing seamoth to pass through it instead of walking on top of it.
+        </p>
+        
+        <h3>Solution:</h3>
+        <ul>
+          <li><strong>Investigation:</strong> 
+            <ul>
+              <li>Used the in-game debug mode to confirm the absence of collisions.</li>
+              <li>Verified that the terrain mesh was missing a collider component.</li>
+            </ul>
+          </li>
+          <li><strong>Fix Implementation:</strong> 
+            <ul>
+              <li>Adjusted the collider’s position and size to align perfectly with the terrain geometry.</li>
+            </ul>
+          </li>
+          <li><strong>Testing:</strong>
+            <ul>
+              <li>Reproduced the scenario after applying the fix to ensure seamoth could no longer fall through the terrain.</li>
+              <li>Tested other areas around the game to confirm no similar issues existed.</li>
+            </ul>
+          </li>
+        </ul>
+        
 
       <iframe 
         src="https://www.youtube.com/embed/XgC-rjim_TE" 
@@ -226,10 +283,81 @@
       </iframe>
     </section>
 
+   <section class="bug-report">
+    <h2>Bug Report Example: Subnautica - Cyclops Launch Glitch</h2>
+    <h3>Details:</h3>
+    <p><strong>Title:</strong> Player Gets Launched Out of Cyclops When Running into Storage Bay</p>
+    <p><strong>Priority:</strong> Medium</p>
+    <p><strong>Severity:</strong> Moderate</p>
+
+    <h3>Description:</h3>
+    <p>
+        When sprinting into the storage bay of the Cyclops, players are sometimes launched out of the Cyclops at high speed. This can result in disorientation, loss of health, or difficulty re-entering the Cyclops if it is moving.
+    </p>
+
+    <h3>Steps to Reproduce:</h3>
+    <ol>
+        <li>Launch Subnautica and load a save file with an active Cyclops.</li>
+        <li>Board the Cyclops and locate the storage bay near the rear of the submarine.</li>
+        <li>Sprint (using the default run key) directly into the storage bay while facing the lockers.</li>
+        <li>Observe the player being launched out of the Cyclops at high speed.</li>
+    </ol>
+
+    <h3>Expected Behavior:</h3>
+    <p>
+        Players should be able to run into the storage bay without being launched or encountering abnormal physics behavior.
+    </p>
+
+    <h3>Observed Behavior:</h3>
+    <p>
+        Sprinting into the storage bay causes the player to be launched out of the Cyclops at an unintended velocity, breaking immersion and potentially leading to gameplay disruption.
+    </p>
+
+    <h3>Root Cause:</h3>
+    <p>
+        A collision issue in the Cyclops storage bay physics causes the player’s momentum to be multiplied unexpectedly. This occurs due to improperly configured collision boxes in the storage area.
+    </p>
+
+    <h3>Solution:</h3>
+    <ul>
+        <li><strong>Investigation:</strong>
+            <ul>
+                <li>Recreated the issue using debug tools to analyze collision events in the storage bay.</li>
+                <li>Found overlapping collision boxes near the lockers, which triggered abnormal velocity calculations.</li>
+            </ul>
+        </li>
+        <li><strong>Fix Implementation:</strong>
+            <ul>
+                <li>Adjusted the collision boxes in the Cyclops storage bay to remove overlaps.</li>
+                <li>Modified physics calculations to limit velocity when collision events occur in confined spaces.</li>
+            </ul>
+        </li>
+        <li><strong>Testing:</strong>
+            <ul>
+                <li>Repeated the sprinting scenario in various parts of the Cyclops to confirm the issue was resolved.</li>
+                <li>Conducted regression testing to ensure normal physics behavior in other areas of the Cyclops.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Resolution:</h3>
+    <p>
+        The bug was resolved and Players can now sprint into the Cyclops storage bay without being launched out of the submarine.
+    </p>
+
+      <iframe 
+        src="https://www.youtube.com/embed/NGzuvKOY2xc" 
+        frameborder="0" 
+        allowfullscreen 
+        title="Cyclops Launch Glitch">
+      </iframe>
+    </section>
+
+    <!-- Footer -->
     <footer>
       &copy; 2024 Megan Campbell. All rights reserved.
     </footer>
   </div>
 </body>
-</html>
+</html> 
 
