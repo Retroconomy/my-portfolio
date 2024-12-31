@@ -120,7 +120,40 @@
       margin: 10px 0;
       font-size: 20px;
     }
+  .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Desktop: 3 columns per row */
+      gap: 20px;
+      justify-items: center;
+    }
 
+    .gallery .project-tile {
+      background: #1B4A32;
+      border: 3px solid #D4AF37;
+      border-radius: 8px;
+      text-align: center;
+      width: 100%;
+      max-width: 280px;
+      padding: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery .project-tile img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .gallery .project-tile h3 {
+      color: #FFFFFF;
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .gallery .project-tile:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
     footer {
       background-color: #1B4A32;
       text-align: center;
