@@ -90,21 +90,20 @@
       margin: 20px 0;
     }
 
-    /* Gallery */
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
+   .video-container {
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers content horizontally */
+  margin: 30px 0; /* Adds spacing around the video */
+}
 
-    .gallery img {
-      width: 300px;
-      height: 200px;
-      object-fit: cover;
-      border: 3px solid #D4AF37;
-      border-radius: 10px;
-    }
+.video-container iframe {
+  width: 100%; /* Ensures responsive width */
+  max-width: 800px; /* Limits maximum width */
+  height: 450px; /* Fixed height */
+  border: 3px solid #D4AF37; /* Adds a gold border */
+  border-radius: 10px; /* Rounds corners of the video */
+}
+
 
     /* Footer */
     footer {
