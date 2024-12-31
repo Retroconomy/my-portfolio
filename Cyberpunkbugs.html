@@ -139,12 +139,6 @@
         height: 300px;
       }
 
-     .gallery {
-  display: flex; /* Enables flexbox */
-  justify-content: center; /* Centers the image horizontally */
-  margin: 30px 0; /* Adds spacing around the gallery */
-      }
-
 .gallery img {
   width: 300px; /* Sets the width of the image */
   height: auto; /* Maintains the aspect ratio */
@@ -268,10 +262,26 @@
         </p>
       </section>
       
-       <!-- Gallery Section -->
-    <section class="gallery">
-        <img src="Images/Tpose.jpg" alt="Tpose">
-      </section>
+   <section class="gallery">
+  <img src="Images/Tpose.jpg" alt="Tpose Glitch">
+</section>
+
+<style>
+  .gallery {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers the image horizontally */
+    margin: 30px 0; /* Adds spacing around the gallery */
+  }
+
+  .gallery img {
+    width: 300px; /* Sets the width of the image */
+    height: auto; /* Maintains the aspect ratio */
+    border: 3px solid #D4AF37; /* Adds a gold border */
+    border-radius: 10px; /* Rounds the corners */
+    object-fit: cover; /* Ensures the image fits nicely in the set dimensions */
+  }
+</style>
+
 
       <section class="bug-report">
         <h2>Bug Report: Cyberpunk 2077 - Enemies Seeing Through Walls or when died</h2>
