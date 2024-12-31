@@ -282,6 +282,32 @@
       </div>
     </section>
 
+    <script>
+    // Default sorting: Newest to Oldest
+    window.onload = function() {
+      const filterDropdown = document.getElementById('filter');
+      filterDropdown.value = 'newest';
+      filterProjects();
+    };
+
+    function filterProjects() {
+      const gallery = document.getElementById('projects-gallery');
+      const projects = Array.from(gallery.children);
+      const filterValue = document.getElementById('filter').value;
+
+      if (filterValue === 'newest') {
+        projects.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+      } else if (filterValue === 'oldest') {
+        projects.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+      } else if (filterValue === 'alphabetical') {
+        projects.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title));
+      }
+
+      gallery.innerHTML = '';
+      projects.forEach(project => gallery.appendChild(project));
+    }
+  </script>
+    
     <!-- Footer Section -->
     <footer>
       &copy; 2024 Megan Campbell. All rights reserved.
