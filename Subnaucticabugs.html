@@ -109,6 +109,40 @@
       border-top: 5px solid #D4AF37;
       color: #FFFFFF;
       font-size: 14px;
+
+        /* Mobile Optimization */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 28px; /* Smaller header for mobile */
+      }
+
+      nav {
+        flex-wrap: wrap; /* Wrap navigation links */
+      }
+
+      nav a {
+        margin: 5px 10px; /* Adjust spacing for smaller screens */
+        font-size: 14px; /* Smaller font size */
+      }
+
+      .filter-container select {
+        width: 90%; /* Fit filter dropdown to smaller screens */
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible layout */
+        gap: 15px; /* Reduce gaps */
+      }
+
+      .gallery .bug-tile {
+        max-width: none; /* Allow tiles to resize naturally */
+        padding: 8px; /* Adjust padding for smaller screens */
+      }
+
+      .gallery .bug-tile h3 {
+        font-size: 16px; /* Smaller titles */
+      }
+    
     }
   </style>
 </head>
