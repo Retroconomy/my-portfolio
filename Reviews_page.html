@@ -9,13 +9,13 @@
     body {
       font-family: 'Ysabeau SC', sans-serif;
       margin: 0;
-      background: linear-gradient(to bottom, #2C6E4B, #1B4A32, #0D2A1C); /* Green gradient */
+      background: linear-gradient(to bottom, #2C6E4B, #1B4A32, #0D2A1C);
       color: #F0EAD6;
     }
 
     #content-wrapper {
-      background-color: rgba(44, 110, 75, 0.95); /* Semi-transparent forest green */
-      border: 5px solid #FFFFFF; /* White border */
+      background-color: rgba(44, 110, 75, 0.95);
+      border: 5px solid #FFFFFF;
       max-width: 1200px;
       margin: auto;
       padding: 20px;
@@ -38,6 +38,7 @@
     nav {
       background-color: #1B4A32;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       padding: 10px 0;
       margin-bottom: 20px;
@@ -45,7 +46,7 @@
 
     nav a {
       color: #F0EAD6;
-      margin: 0 15px;
+      margin: 10px 15px;
       text-decoration: none;
       font-size: 18px;
       font-weight: bold;
@@ -71,7 +72,8 @@
     .social-links a:hover {
       color: #D4AF37;
     }
-     .filter-container {
+
+    .filter-container {
       text-align: center;
       margin-bottom: 20px;
     }
@@ -133,9 +135,10 @@
       margin: 10px 0;
       font-size: 20px;
     }
-  .gallery {
+
+    .gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Desktop: 3 columns per row */
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       justify-items: center;
     }
@@ -167,6 +170,7 @@
       transform: scale(1.05);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
+
     footer {
       background-color: #1B4A32;
       text-align: center;
@@ -179,36 +183,40 @@
     /* Mobile Optimization */
     @media (max-width: 768px) {
       header h1 {
-        font-size: 28px; /* Smaller header font size for mobile */
+        font-size: 28px;
       }
 
       nav {
-        flex-wrap: wrap; /* Wrap navigation links on smaller screens */
+        flex-wrap: wrap;
       }
 
       nav a {
-        font-size: 16px; /* Adjust font size for smaller devices */
+        font-size: 16px;
         margin: 5px;
       }
 
       .reviews-gallery {
-        flex-wrap: wrap; /* Wrap reviews to fit smaller screens */
-        justify-content: center; /* Center reviews on mobile */
-        gap: 15px; /* Adjust spacing */
-        padding: 10px; /* Reduce padding */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px;
       }
 
       .review-item {
-        width: 80%; /* Reduce review item size for smaller screens */
+        width: 80%;
         max-width: 250px;
       }
 
       .review-item h3 {
-        font-size: 18px; /* Smaller title font size */
+        font-size: 18px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       }
 
       footer {
-        font-size: 12px; /* Adjust footer font size for mobile */
+        font-size: 12px;
       }
     }
   </style>
