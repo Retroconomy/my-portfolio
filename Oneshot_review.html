@@ -36,6 +36,27 @@
       color: #D4AF37;
     }
 
+    nav {
+      background-color: #1B4A32;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      color: #F0EAD6;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #D4AF37;
+    }
+
     section {
       margin: 20px 0;
     }
@@ -45,28 +66,12 @@
       font-size: 28px;
       color: #D4AF37;
     }
-    nav {
-      background-color: #1B4A32;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-      margin-bottom: 20px;
-    }
-    nav a {
-      color: #F0EAD6;
-      margin: 0 15px;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #D4AF37;
-    }
+
     .video-container {
       text-align: center;
       margin: 20px 0;
     }
+
     iframe {
       width: 100%;
       max-width: 800px;
@@ -99,6 +104,36 @@
       color: #FFFFFF;
       font-size: 14px;
     }
+
+    /* Mobile Optimization */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        font-size: 16px;
+        margin: 5px;
+      }
+
+      iframe {
+        height: 300px;
+      }
+
+      .gallery img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+      }
+
+      footer {
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -110,29 +145,23 @@
 
     <!-- Navigation Bar -->
     <nav>
-        <a href="index.html">Home</a>
-        <a href="Reviews_page.html">Reviews</a>
-        <a href="Projects.html">Projects</a>
-        <a href="Contact.html">Contact</a>
-        <a href="QApage.html">QA Testing</a>
-      </nav>
+      <a href="index.html">Home</a>
+      <a href="Reviews_page.html">Reviews</a>
+      <a href="Projects.html">Projects</a>
+      <a href="Contact.html">Contact</a>
+      <a href="QApage.html">QA Testing</a>
+    </nav>
 
-
-      <section class="video-section">
-        <div class="video-container">
-          <iframe 
-            src="https://www.youtube.com/embed/ctYNBd6t4-g?si=obJb43lMh4XkDuL5" 
-            title="OneShot Trailer" 
-            width="560" 
-            height="315" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-          </iframe>
-        </div>
-      </section>
-      
+    <!-- Video Section -->
+    <section class="video-section">
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/ctYNBd6t4-g?si=obJb43lMh4XkDuL5" 
+          title="OneShot Trailer" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
 
     <!-- Game Info Section -->
     <section>
@@ -199,3 +228,4 @@
   </div>
 </body>
 </html>
+
